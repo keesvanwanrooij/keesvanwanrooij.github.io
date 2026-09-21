@@ -41,7 +41,7 @@
         "inLanguage": "nl-NL",
         "isPartOf": { "@id": "https://keesvanwanrooij.github.io/#website" },
         "author": { "@type": "Person", "@id": "https://keesvanwanrooij.github.io/#kees", "name": "Kees van Wanrooij", "url": "https://keesvanwanrooij.github.io/over-mij/" },
-        "dateModified": "2026-09-19"
+        "dateModified": "2026-09-21"
       },
       {
         "@type": "BreadcrumbList",
@@ -82,18 +82,21 @@
 <body>
   <a class="skip" href="#main">Ga naar de inhoud</a>
 
+  <!-- site:header:start -->
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="/">Kees van Wanrooij<span class="dot" aria-hidden="true">.</span></a>
       <nav class="site-nav" aria-label="Hoofdmenu">
         <ul>
           <li><a href="/beleggen/" aria-current="page">Beleggen</a></li>
-          <li><a href="/elektrotechniek/">Elektrotechniek</a></li>
+          <li><a href="https://keesvanwanrooij.github.io/belegger-kees-methode/">Methode</a></li>
+          <li><a href="/cursussen/">Cursussen</a></li>
           <li><a href="/over-mij/">Over mij</a></li>
         </ul>
       </nav>
     </div>
   </header>
+  <!-- site:header:end -->
 
   <main id="main">
     <section class="page-hero" aria-labelledby="titel">
@@ -169,7 +172,7 @@
         </ol>
         <div class="notice">
           <strong>Status</strong>
-          <p>De documentatie en de werkboeken zijn een werkversie. Ik verbeter ze door ze te gebruiken en helder uit te leggen. Er staat nog geen volledig uitgewerkt, gecontroleerd onderzoeksrapport in de openbare methode.</p>
+          <p>De documentatie en de werkboeken zijn een werkversie. Ik verbeter ze door ze te gebruiken en helder uit te leggen. Er staat nog geen volledig uitgewerkt, gecontroleerd onderzoeksrapport in de <a href="https://keesvanwanrooij.github.io/belegger-kees-methode/">openbare methode</a>.</p>
         </div>
       </div>
     </section>
@@ -191,10 +194,13 @@
         </div>
         <div class="grid grid--2">
           <article class="card">
-            <p class="pill">Binnenkort openbaar</p>
+            <p class="pill">Live</p>
             <h3>Belegger Kees Methode</h3>
             <p>Elf hoofdstukken over mijn beleggingsfilosofie en werkwijze, de procedures van de snelle en de uitgebreide analyse, een promptbibliotheek voor AI, en vijf Excel-werkboeken met twee Word-sjablonen. Alles is een werkversie.</p>
-            <p class="small">Zodra de repository openbaar is, staat hier de link.</p>
+            <p class="card-foot">
+              <a href="https://keesvanwanrooij.github.io/belegger-kees-methode/">Lees de methode</a><br>
+              <a href="https://github.com/keesvanwanrooij/belegger-kees-methode">Bekijk op GitHub</a>
+            </p>
           </article>
           <article class="card">
             <p class="pill">In aanbouw, binnenkort openbaar</p>
@@ -235,40 +241,50 @@
           <p>De content op Belegger Kees is uitsluitend bedoeld voor educatieve doeleinden en vormt geen persoonlijk beleggingsadvies. Beleggen brengt risico's met zich mee. De waarde van beleggingen kan fluctueren en je kunt je inleg verliezen. Resultaten uit het verleden bieden geen garantie voor de toekomst. Raadpleeg een erkende financieel adviseur voor advies op maat. Belegger Kees is geen geregistreerde beleggingsonderneming bij de AFM.</p>
           <p style="margin-top:12px"><a href="https://beleggerkees.nl/disclaimer">Lees de volledige disclaimer op beleggerkees.nl</a></p>
         </div>
-        <p class="small" style="margin-top:24px">Bijgewerkt: 19 september 2026. Auteur: Kees van Wanrooij.</p>
+        <p class="small" style="margin-top:24px">Bijgewerkt: 21 september 2026. Auteur: Kees van Wanrooij.</p>
       </div>
     </section>
   </main>
 
+  <!-- site:footer:start -->
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
         <div>
           <p class="footer-brand">Kees van Wanrooij<span class="dot" aria-hidden="true">.</span></p>
-          <p class="small">Belegger en NLP-practitioner. Oprichter van Belegger Kees.</p>
+          <p class="small">Belegger en NLP-practitioner. Oprichter van Belegger Kees. Educatie, geen beleggingsadvies.</p>
         </div>
-        <div>
-          <h2>Pagina's</h2>
-          <ul>
-            <li><a href="/beleggen/">Beleggen</a></li>
-            <li><a href="/elektrotechniek/">Elektrotechniek</a></li>
-            <li><a href="/over-mij/">Over mij</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Elders</h2>
+        <nav aria-label="Beleggen">
+          <h2>Beleggen</h2>
           <ul>
             <li><a href="https://beleggerkees.nl">Belegger Kees</a></li>
+            <li><a href="https://keesvanwanrooij.github.io/belegger-kees-methode/">Belegger Kees Methode</a></li>
+            <li><a href="/beleggen/" aria-current="true">Beleggen met GARP en NLP</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Gratis cursussen">
+          <h2>Gratis cursussen</h2>
+          <ul>
+            <li><a href="https://keesvanwanrooij.github.io/cursus-elektrotechniek/">Cursus Elektrotechniek</a></li>
+            <li><a href="https://keesvanwanrooij.github.io/cursus-cv-ketels/">Cursus CV-ketels</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Kees van Wanrooij">
+          <h2>Kees van Wanrooij</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/over-mij/">Over mij</a></li>
             <li><a href="https://www.linkedin.com/in/keesvanwanrooij/">LinkedIn</a></li>
             <li><a href="https://www.instagram.com/beleggerkees/">Instagram</a></li>
             <li><a href="https://github.com/keesvanwanrooij">GitHub</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
       <div class="footer-legal">
-        <p>© 2026 Kees van Wanrooij.</p>
+        <p>© 2026 Kees van Wanrooij. Belegger Kees is geen geregistreerde beleggingsonderneming bij de AFM.</p>
       </div>
     </div>
   </footer>
+  <!-- site:footer:end -->
 </body>
 </html>

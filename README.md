@@ -4,22 +4,38 @@ Persoonlijke merkwebsite van Kees van Wanrooij, belegger en NLP-practitioner, op
 
 Live op https://keesvanwanrooij.github.io/
 
-De site is de centrale hub die naar de projecten linkt: [Belegger Kees](https://beleggerkees.nl), de gratis [Cursus Elektrotechniek](https://keesvanwanrooij.github.io/cursus-elektrotechniek/) en, zodra ze openbaar zijn, de Belegger Kees Methode en de Insider scanner. Klimaat en HVAC volgt.
+De site is de centrale hub van het merk Kees van Wanrooij. Ongeveer 80% gaat over beleggen: [Belegger Kees](https://beleggerkees.nl) en de openbare [Belegger Kees Methode](https://keesvanwanrooij.github.io/belegger-kees-methode/). Een klein deel is voor de technische achtergrond (TU Delft) en de gratis cursussen [Elektrotechniek](https://keesvanwanrooij.github.io/cursus-elektrotechniek/) en [CV-ketels](https://keesvanwanrooij.github.io/cursus-cv-ketels/). De Insider scanner volgt zodra hij openbaar is.
+
+## Ecosysteem
+
+Vier sites vormen samen het merk. Ze delen hetzelfde ecosysteemblok in de voettekst (Beleggen, Gratis cursussen, Kees van Wanrooij), met behoud van eigen navigatie en, bij de cursussen, de donatieknop.
+
+| Site | Repository |
+| --- | --- |
+| [keesvanwanrooij.github.io](https://keesvanwanrooij.github.io/) (deze hub) | [keesvanwanrooij.github.io](https://github.com/keesvanwanrooij/keesvanwanrooij.github.io) |
+| [Belegger Kees Methode](https://keesvanwanrooij.github.io/belegger-kees-methode/) | [belegger-kees-methode](https://github.com/keesvanwanrooij/belegger-kees-methode) |
+| [Cursus Elektrotechniek](https://keesvanwanrooij.github.io/cursus-elektrotechniek/) | [cursus-elektrotechniek](https://github.com/keesvanwanrooij/cursus-elektrotechniek) |
+| [Cursus CV-ketels](https://keesvanwanrooij.github.io/cursus-cv-ketels/) | [cursus-cv-ketels](https://github.com/keesvanwanrooij/cursus-cv-ketels) |
+
+Wijzig je de lijst met sites, pas dan het ecosysteemblok aan in alle vier: `tools/build-chrome.py` hier, `site/build.py` (`ECO`) in de methode, en `Views.footer()` in beide cursussen.
 
 ## Opbouw
 
-Gewone HTML en CSS, geen build-stap, geen JavaScript en geen afhankelijkheden. Alle paden beginnen met `/`, dus de site werkt vanaf de root van een domein.
+Gewone HTML en CSS, geen JavaScript en geen afhankelijkheden. Kop en voet komen uit één bron: draai na een wijziging `python tools/build-chrome.py`. Alle paden beginnen met `/`, dus de site werkt vanaf de root van een domein.
 
 ```text
 index.html                  home
 beleggen/index.html         Beleggen met GARP en NLP (met FAQ)
-elektrotechniek/index.html  landingspagina voor de cursus
+cursussen/index.html        overzicht van de gratis cursussen
+elektrotechniek/index.html  landingspagina voor de cursus Elektrotechniek
+cv-ketels/index.html        landingspagina voor de cursus CV-ketels
 over-mij/index.html         achtergrond en verhaal
 404.html                    foutpagina
 assets/css/style.css        alle stijlen en tokens
 assets/fonts/               Inter en JetBrains Mono, zelf gehost
 assets/img/                 portret en deelafbeelding (og.png)
 tools/og.html               bron van og.png, zie het commentaar in het bestand
+tools/build-chrome.py       zet de gedeelde kop en voet in alle pagina's
 sitemap.xml, robots.txt, llms.txt
 ```
 
@@ -39,10 +55,10 @@ Voor teksten gelden dezelfde regels als bij Belegger Kees: educatie en geen advi
 
 ## Repositories openbaar maken
 
-De Belegger Kees Methode en de Insider scanner staan op privé. Op de site hebben ze een kaart met het label "Binnenkort openbaar" en zonder link, zodat bezoekers geen 404 zien. Wordt een repository openbaar:
+De Belegger Kees Methode is openbaar en staat als Live op de home en op `beleggen/`. De Insider scanner staat nog op privé en heeft een kaart met het label "In aanbouw, binnenkort openbaar" en zonder link, zodat bezoekers geen 404 zien. Wordt de scanner openbaar:
 
-1. Vervang op `index.html` (sectie "Open projecten") en `beleggen/index.html` (sectie "Tools en open projecten") het label door "Live".
-2. Verwijder de regel "Zodra de repository openbaar is, staat hier de link." en zet een link naar de repository in de kaart.
+1. Vervang op `index.html` (sectie "Waar ik aan werk") en `beleggen/index.html` (sectie "Tools en open projecten") het label door "Live" en zet een link naar de repository in de kaart.
+2. Verwijder de regel "Zodra de repository openbaar is, staat hier de link." op `beleggen/index.html`.
 3. Voeg de link toe aan `llms.txt`.
 4. Werk `lastmod` in `sitemap.xml` en "Bijgewerkt" op de pagina bij.
 
