@@ -18,9 +18,9 @@ Merk: Belegger Kees, https://beleggerkees.nl
 ## Elders
 
 - [Belegger Kees](https://beleggerkees.nl): het merk, de Community en de openbare portefeuille.
-- [Belegger Kees Methode](https://www.keesvanwanrooij.nl/belegger-kees-methode/): de openbare methode voor aandelenanalyse, waardering en NLP. Broncode: https://github.com/keesvanwanrooij/belegger-kees-methode
-- [Cursus Elektrotechniek](https://www.keesvanwanrooij.nl/cursus-elektrotechniek/): de cursus zelf, open source. Broncode: https://github.com/keesvanwanrooij/cursus-elektrotechniek
-- [Cursus CV-ketels](https://www.keesvanwanrooij.nl/cursus-cv-ketels/): de cursus zelf, open source. Broncode: https://github.com/keesvanwanrooij/cursus-cv-ketels
+- [Belegger Kees Methode](https://www.keesvanwanrooij.nl/belegger-kees-methode/): de openbare methode voor aandelenanalyse, waardering en NLP. Overzicht voor AI: https://www.keesvanwanrooij.nl/belegger-kees-methode/llms.txt. Broncode: https://github.com/keesvanwanrooij/belegger-kees-methode
+- [Cursus Elektrotechniek](https://www.keesvanwanrooij.nl/cursus-elektrotechniek/): de cursus zelf, open source, met alle 62 lessen. Overzicht voor AI: https://www.keesvanwanrooij.nl/cursus-elektrotechniek/llms.txt en https://www.keesvanwanrooij.nl/cursus-elektrotechniek/llms-full.txt. Broncode: https://github.com/keesvanwanrooij/cursus-elektrotechniek
+- [Cursus CV-ketels](https://www.keesvanwanrooij.nl/cursus-cv-ketels/): de cursus zelf, open source, met alle 121 lessen. Overzicht voor AI: https://www.keesvanwanrooij.nl/cursus-cv-ketels/llms.txt en https://www.keesvanwanrooij.nl/cursus-cv-ketels/llms-full.txt. Broncode: https://github.com/keesvanwanrooij/cursus-cv-ketels
 - [GitHub](https://github.com/keesvanwanrooij)
 - [LinkedIn](https://www.linkedin.com/in/keesvanwanrooij/)
 - [Instagram](https://www.instagram.com/beleggerkees/)
