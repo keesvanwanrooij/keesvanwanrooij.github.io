@@ -10,17 +10,21 @@ Merk: Belegger Kees, https://beleggerkees.nl
 
 - [Home](https://keesvanwanrooij.github.io/): wie Kees van Wanrooij is en waar hij aan werkt.
 - [Beleggen met GARP en NLP](https://keesvanwanrooij.github.io/beleggen/): hoe hij een aandeel onderzoekt volgens de Belegger Kees Methode, met screening, snelle analyse, een DCF met elf prognosejaren en NLP voor beleggers. Nooit een koersdoel of koopadvies.
-- [Gratis cursus elektrotechniek](https://keesvanwanrooij.github.io/elektrotechniek/): 12 modules en 62 lessen voor beginners, zonder account. Klimaat en HVAC (airco, cv-ketel, warmtepomp) volgt.
+- [Gratis cursussen](https://keesvanwanrooij.github.io/cursussen/): overzicht van de twee gratis cursussen die Kees naast het beleggen maakt.
+- [Gratis cursus elektrotechniek](https://keesvanwanrooij.github.io/elektrotechniek/): 12 modules en 62 lessen voor beginners, zonder account.
+- [Gratis cursus cv-ketels](https://keesvanwanrooij.github.io/cv-ketels/): 19 modules en 121 lessen voor de cv-ketel monteur, met toetsvragen, flashcards en een storingzoeker.
 - [Over Kees van Wanrooij](https://keesvanwanrooij.github.io/over-mij/): achtergrond (MSc Chemische Technologie, TU Delft), belegger sinds zijn 22ste, NLP Practitioner, en waarom Belegger Kees bestaat.
 
 ## Elders
 
 - [Belegger Kees](https://beleggerkees.nl): het merk, de Community en de openbare portefeuille.
-- [Cursus Elektrotechniek](https://keesvanwanrooij.github.io/cursus-elektrotechniek/): de cursus zelf, open source.
+- [Belegger Kees Methode](https://keesvanwanrooij.github.io/belegger-kees-methode/): de openbare methode voor aandelenanalyse, waardering en NLP. Broncode: https://github.com/keesvanwanrooij/belegger-kees-methode
+- [Cursus Elektrotechniek](https://keesvanwanrooij.github.io/cursus-elektrotechniek/): de cursus zelf, open source. Broncode: https://github.com/keesvanwanrooij/cursus-elektrotechniek
+- [Cursus CV-ketels](https://keesvanwanrooij.github.io/cursus-cv-ketels/): de cursus zelf, open source. Broncode: https://github.com/keesvanwanrooij/cursus-cv-ketels
 - [GitHub](https://github.com/keesvanwanrooij)
 - [LinkedIn](https://www.linkedin.com/in/keesvanwanrooij/)
 - [Instagram](https://www.instagram.com/beleggerkees/)
 
 ## Let op
 
-De Belegger Kees Methode en de Insider scanner zijn in opbouw en nog niet openbaar. NLP is hier neurolinguïstisch programmeren, een werkwijze en geen bewezen mechanisme. Een modelberekening is geen koersdoel.
+De Belegger Kees Methode is openbaar maar een werkversie. De Insider scanner is in opbouw en nog niet openbaar. Beleggen is de hoofdfocus, de cursussen zijn een klein deel van het werk. NLP is hier neurolinguïstisch programmeren, een werkwijze en geen bewezen mechanisme. Een modelberekening is geen koersdoel.
