@@ -4,7 +4,7 @@ Zet de gedeelde kop (navigatie) en voet (ecosysteem) in alle pagina's.
 In elke pagina staan de plaatshouders <!-- site:header --> en <!-- site:footer -->
 (of het reeds gegenereerde blok tussen <!-- site:header:start/end -->). Dit script vult ze.
 De ecosysteemblokken in de voet zijn hetzelfde in alle vier de repositories:
-  keesvanwanrooij.github.io, belegger-kees-methode, cursus-elektrotechniek, cursus-cv-ketels.
+  keesvanwanrooij.nl (repo keesvanwanrooij.github.io), belegger-kees-methode, cursus-elektrotechniek, cursus-cv-ketels.
 Wijzig je de lijst hieronder, pas dan ook de drie andere repositories aan.
 
 Gebruik: python tools/build-chrome.py
@@ -25,9 +25,9 @@ PAGES = {
     "404.html": ("", ""),
 }
 
-METHODE = "https://keesvanwanrooij.github.io/belegger-kees-methode/"
-ELEKTRO = "https://keesvanwanrooij.github.io/cursus-elektrotechniek/"
-CV = "https://keesvanwanrooij.github.io/cursus-cv-ketels/"
+METHODE = "https://keesvanwanrooij.nl/belegger-kees-methode/"
+ELEKTRO = "https://keesvanwanrooij.nl/cursus-elektrotechniek/"
+CV = "https://keesvanwanrooij.nl/cursus-cv-ketels/"
 
 NAV = [
     ("beleggen", "/beleggen/", "Beleggen"),
