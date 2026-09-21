@@ -2,25 +2,25 @@
 
 > Persoonlijke website van Kees van Wanrooij, belegger en NLP-practitioner en oprichter van Belegger Kees. Nederlandstalig. Educatie, geen persoonlijk beleggingsadvies. Kees van Wanrooij is geen geregistreerde beleggingsonderneming bij de AFM.
 
-Site: https://keesvanwanrooij.nl/
+Site: https://www.keesvanwanrooij.nl/
 Auteur: Kees van Wanrooij (met kleine v, altijd voluit)
 Merk: Belegger Kees, https://beleggerkees.nl
 
 ## Pagina's
 
-- [Home](https://keesvanwanrooij.nl/): wie Kees van Wanrooij is en waar hij aan werkt.
-- [Beleggen met GARP en NLP](https://keesvanwanrooij.nl/beleggen/): hoe hij een aandeel onderzoekt volgens de Belegger Kees Methode, met screening, snelle analyse, een DCF met elf prognosejaren en NLP voor beleggers. Nooit een koersdoel of koopadvies.
-- [Gratis cursussen](https://keesvanwanrooij.nl/cursussen/): overzicht van de twee gratis cursussen die Kees naast het beleggen maakt.
-- [Gratis cursus elektrotechniek](https://keesvanwanrooij.nl/elektrotechniek/): 12 modules en 62 lessen voor beginners, zonder account.
-- [Gratis cursus cv-ketels](https://keesvanwanrooij.nl/cv-ketels/): 19 modules en 121 lessen voor de cv-ketel monteur, met toetsvragen, flashcards en een storingzoeker.
-- [Over Kees van Wanrooij](https://keesvanwanrooij.nl/over-mij/): achtergrond (MSc Chemische Technologie, TU Delft), belegger sinds zijn 22ste, NLP Practitioner, en waarom Belegger Kees bestaat.
+- [Home](https://www.keesvanwanrooij.nl/): wie Kees van Wanrooij is en waar hij aan werkt.
+- [Beleggen met GARP en NLP](https://www.keesvanwanrooij.nl/beleggen/): hoe hij een aandeel onderzoekt volgens de Belegger Kees Methode, met screening, snelle analyse, een DCF met elf prognosejaren en NLP voor beleggers. Nooit een koersdoel of koopadvies.
+- [Gratis cursussen](https://www.keesvanwanrooij.nl/cursussen/): overzicht van de twee gratis cursussen die Kees naast het beleggen maakt.
+- [Gratis cursus elektrotechniek](https://www.keesvanwanrooij.nl/elektrotechniek/): 12 modules en 62 lessen voor beginners, zonder account.
+- [Gratis cursus cv-ketels](https://www.keesvanwanrooij.nl/cv-ketels/): 19 modules en 121 lessen voor de cv-ketel monteur, met toetsvragen, flashcards en een storingzoeker.
+- [Over Kees van Wanrooij](https://www.keesvanwanrooij.nl/over-mij/): achtergrond (MSc Chemische Technologie, TU Delft), belegger sinds zijn 22ste, NLP Practitioner, en waarom Belegger Kees bestaat.
 
 ## Elders
 
 - [Belegger Kees](https://beleggerkees.nl): het merk, de Community en de openbare portefeuille.
-- [Belegger Kees Methode](https://keesvanwanrooij.nl/belegger-kees-methode/): de openbare methode voor aandelenanalyse, waardering en NLP. Broncode: https://github.com/keesvanwanrooij/belegger-kees-methode
-- [Cursus Elektrotechniek](https://keesvanwanrooij.nl/cursus-elektrotechniek/): de cursus zelf, open source. Broncode: https://github.com/keesvanwanrooij/cursus-elektrotechniek
-- [Cursus CV-ketels](https://keesvanwanrooij.nl/cursus-cv-ketels/): de cursus zelf, open source. Broncode: https://github.com/keesvanwanrooij/cursus-cv-ketels
+- [Belegger Kees Methode](https://www.keesvanwanrooij.nl/belegger-kees-methode/): de openbare methode voor aandelenanalyse, waardering en NLP. Broncode: https://github.com/keesvanwanrooij/belegger-kees-methode
+- [Cursus Elektrotechniek](https://www.keesvanwanrooij.nl/cursus-elektrotechniek/): de cursus zelf, open source. Broncode: https://github.com/keesvanwanrooij/cursus-elektrotechniek
+- [Cursus CV-ketels](https://www.keesvanwanrooij.nl/cursus-cv-ketels/): de cursus zelf, open source. Broncode: https://github.com/keesvanwanrooij/cursus-cv-ketels
 - [GitHub](https://github.com/keesvanwanrooij)
 - [LinkedIn](https://www.linkedin.com/in/keesvanwanrooij/)
 - [Instagram](https://www.instagram.com/beleggerkees/)

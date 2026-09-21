@@ -1,10 +1,10 @@
-# keesvanwanrooij.github.io (keesvanwanrooij.nl)
+# keesvanwanrooij.github.io (www.keesvanwanrooij.nl)
 
 Persoonlijke merkwebsite van Kees van Wanrooij, belegger en NLP-practitioner, oprichter van Belegger Kees.
 
-Live op https://keesvanwanrooij.nl/
+Live op https://www.keesvanwanrooij.nl/
 
-De site is de centrale hub van het merk Kees van Wanrooij. Ongeveer 80% gaat over beleggen: [Belegger Kees](https://beleggerkees.nl) en de openbare [Belegger Kees Methode](https://keesvanwanrooij.nl/belegger-kees-methode/). Een klein deel is voor de technische achtergrond (TU Delft) en de gratis cursussen [Elektrotechniek](https://keesvanwanrooij.nl/cursus-elektrotechniek/) en [CV-ketels](https://keesvanwanrooij.nl/cursus-cv-ketels/). De Insider scanner volgt zodra hij openbaar is.
+De site is de centrale hub van het merk Kees van Wanrooij. Ongeveer 80% gaat over beleggen: [Belegger Kees](https://beleggerkees.nl) en de openbare [Belegger Kees Methode](https://www.keesvanwanrooij.nl/belegger-kees-methode/). Een klein deel is voor de technische achtergrond (TU Delft) en de gratis cursussen [Elektrotechniek](https://www.keesvanwanrooij.nl/cursus-elektrotechniek/) en [CV-ketels](https://www.keesvanwanrooij.nl/cursus-cv-ketels/). De Insider scanner volgt zodra hij openbaar is.
 
 ## Ecosysteem
 
@@ -12,10 +12,10 @@ Vier sites vormen samen het merk. Ze delen hetzelfde ecosysteemblok in de voette
 
 | Site | Repository |
 | --- | --- |
-| [keesvanwanrooij.nl](https://keesvanwanrooij.nl/) (deze hub) | [keesvanwanrooij.github.io](https://github.com/keesvanwanrooij/keesvanwanrooij.github.io) |
-| [Belegger Kees Methode](https://keesvanwanrooij.nl/belegger-kees-methode/) | [belegger-kees-methode](https://github.com/keesvanwanrooij/belegger-kees-methode) |
-| [Cursus Elektrotechniek](https://keesvanwanrooij.nl/cursus-elektrotechniek/) | [cursus-elektrotechniek](https://github.com/keesvanwanrooij/cursus-elektrotechniek) |
-| [Cursus CV-ketels](https://keesvanwanrooij.nl/cursus-cv-ketels/) | [cursus-cv-ketels](https://github.com/keesvanwanrooij/cursus-cv-ketels) |
+| [www.keesvanwanrooij.nl](https://www.keesvanwanrooij.nl/) (deze hub) | [keesvanwanrooij.github.io](https://github.com/keesvanwanrooij/keesvanwanrooij.github.io) |
+| [Belegger Kees Methode](https://www.keesvanwanrooij.nl/belegger-kees-methode/) | [belegger-kees-methode](https://github.com/keesvanwanrooij/belegger-kees-methode) |
+| [Cursus Elektrotechniek](https://www.keesvanwanrooij.nl/cursus-elektrotechniek/) | [cursus-elektrotechniek](https://github.com/keesvanwanrooij/cursus-elektrotechniek) |
+| [Cursus CV-ketels](https://www.keesvanwanrooij.nl/cursus-cv-ketels/) | [cursus-cv-ketels](https://github.com/keesvanwanrooij/cursus-cv-ketels) |
 
 Wijzig je de lijst met sites, pas dan het ecosysteemblok aan in alle vier: `tools/build-chrome.py` hier, `site/build.py` (`ECO`) in de methode, en `Views.footer()` in beide cursussen.
 
