@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://keesvanwanrooij.github.io/sitemap.xml
+Sitemap: https://keesvanwanrooij.nl/sitemap.xml
+Sitemap: https://keesvanwanrooij.nl/belegger-kees-methode/sitemap.xml
+Sitemap: https://keesvanwanrooij.nl/cursus-elektrotechniek/sitemap.xml
+Sitemap: https://keesvanwanrooij.nl/cursus-cv-ketels/sitemap.xml
