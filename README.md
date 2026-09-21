@@ -47,6 +47,10 @@ python -m http.server 8123
 
 Open daarna http://localhost:8123/.
 
+## Sitemaps en robots.txt
+
+Alleen de `robots.txt` in de root van het domein wordt door zoekmachines gelezen. Die staat in deze repository en noemt de sitemaps van alle vier de sites. De `robots.txt` in de submappen van de cursussen en de methode is dus alleen informatief. De `sitemap.xml` van de hub bevat de eigen pagina's plus de startpagina van elk van de andere drie sites. De sitemaps met alle lessen en hoofdstukken maken de andere repositories zelf.
+
 ## Huisstijl en regels
 
 De stijl volgt het Belegger Kees ontwerpsysteem: wit en Apple-grijs, deep carbon `#1D1D1F`, execution red `#C4303C` als zeldzaam accent (hoogstens een rode knop per scherm), Inter voor tekst en JetBrains Mono voor cijfers, geen donkere modus. Tokens staan bovenaan `assets/css/style.css`.
