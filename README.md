@@ -27,7 +27,7 @@ Wijzig je de lijst met sites, pas dan het ecosysteemblok aan: `tools/build-chrom
 
 ## Opbouw
 
-Gewone HTML en CSS, geen JavaScript en geen afhankelijkheden. Kop en voet komen uit één bron: draai na een wijziging `python tools/build-chrome.py`. Alle paden beginnen met `/`, dus de site werkt vanaf de root van een domein.
+Gewone HTML en CSS, geen JavaScript in de pagina's zelf (het mobiele menu is een CSS-only checkbox-truc) en geen afhankelijkheden. Kop en voet komen uit één bron: draai na een wijziging `python tools/build-chrome.py`. Alle paden beginnen met `/`, dus de site werkt vanaf de root van een domein.
 
 ```text
 index.html                             home
@@ -47,8 +47,10 @@ assets/fonts/               Inter en JetBrains Mono, zelf gehost
 assets/img/                 portret en deelafbeelding (og.png)
 tools/og.html               bron van og.png, zie het commentaar in het bestand
 tools/build-chrome.py       zet de gedeelde kop en voet in alle pagina's
-sitemap.xml                 sitemapindex, wijst naar sitemap-site.xml en de drie andere sites
-sitemap-site.xml            de eigen pagina's van deze site
+tools/build-sitemap.py      bouwt sitemap.xml en sitemap/index.html met alle ~345 pagina's
+sitemap/index.html          leesbaar overzicht van alle pagina's, gegroepeerd per site
+sitemap.xml                 platte lijst met alle pagina's van het hele domein
+sitemap-site.xml            brondata: alleen de eigen pagina's van deze site
 robots.txt, llms.txt
 ```
 
@@ -64,11 +66,17 @@ Open daarna http://localhost:8123/.
 
 Alleen de `robots.txt` in de root van het domein wordt door zoekmachines gelezen. Die staat in deze repository. De `robots.txt` in de submappen van de cursussen en de methode is dus alleen informatief en wordt genegeerd.
 
-`sitemap.xml` hier is een **sitemapindex**, geen paginalijst: hij wijst naar `sitemap-site.xml` (de eigen pagina's van deze site) en naar de `sitemap.xml` van elk van de andere drie repository's. Dat is bewust: die drie sites samen hebben ruim 300 pagina's, die de hub niet zelf kan bijhouden (ze staan in andere repository's met een eigen build). Een sitemapindex laat Google en de andere zoekmachines zelf de drie kindsitemaps ophalen.
+`sitemap.xml` is één platte lijst met **alle ~345 pagina's van het hele domein**: deze site plus de Belegger Kees Methode en de twee cursussen. `tools/build-sitemap.py` bouwt hem: hij haalt de `sitemap.xml` van elk van de andere drie repository's live op (de hub heeft geen lokale toegang tot hun broncode), haalt per pagina de `<title>` op om er een leesbare `/sitemap/`-pagina bij te maken, en schrijft beide bestanden opnieuw.
 
-Dit lost ook op dat de losse sitemaps van de andere sites voorheen nooit gezien werden: `https://www.keesvanwanrooij.nl/belegger-kees-methode/sitemap.xml` stond alleen als aparte `Sitemap:`-regel in `robots.txt`, maar werd nooit als submap van een geregistreerde sitemap gecrawld. Registreer voortaan alleen `https://www.keesvanwanrooij.nl/sitemap.xml` in Search Console; de submaps volgen vanzelf.
+```bash
+python tools/build-sitemap.py
+```
 
-Wijzig je de lijst met sites, werk dan `sitemap.xml` (de vier `<sitemap>`-regels) en de comment in `robots.txt` bij.
+We probeerden eerst een sitemapindex (`sitemap.xml` die alleen naar de vier losse sitemaps wijst), maar die losse sitemaps van de andere sites werden in de praktijk nooit gezien: `https://www.keesvanwanrooij.nl/belegger-kees-methode/sitemap.xml` stond alleen als aparte `Sitemap:`-regel in `robots.txt` en werd niet als submap van een geregistreerde sitemap gecrawld. Eén platte lijst met alle URL's, plus een HTML-pagina vol interne links naar elke pagina, is voor deze site simpeler en geeft Google meer om aan te haken. Registreer `https://www.keesvanwanrooij.nl/sitemap.xml` in Search Console.
+
+`.github/workflows/refresh-sitemap.yml` draait dit script automatisch, dagelijks en handmatig via "Run workflow", en committet het resultaat als er iets veranderd is. Dat vereist dat Actions in deze repository schrijfrechten heeft: **Settings → Actions → General → Workflow permissions → "Read and write permissions"**. Staat dat nog op read-only, dan faalt de commit-stap zichtbaar in de Action-log; de rest van de site blijft gewoon werken.
+
+`sitemap-site.xml` blijft de handmatig onderhouden brondata voor de eigen pagina's van de hub: `tools/build-sitemap.py` leest die uit, in plaats van zelf de hele repository te scannen. Voeg je een pagina toe, werk dan eerst `sitemap-site.xml` bij en draai daarna het script.
 
 De doorstuurpagina's (`cursussen/`, `elektrotechniek/`, `cv-ketels/`) staan op `noindex, follow` met een `canonical` naar de nieuwe URL en een meta refresh. GitHub Pages kan geen serverredirect, dus dit is de dichtstbijzijnde vervanging van een 301. Zet ze niet in `sitemap-site.xml`.
 
@@ -86,7 +94,7 @@ De Belegger Kees Methode is openbaar en staat als Live op de home en op `belegge
 2. Verwijder de regel "Zodra de repository openbaar is, staat hier de link." op `beleggen/index.html`.
 3. Overweeg een eigen pagina `/bk-insider-screener/`, in de root omdat het over beleggen gaat.
 4. Voeg de link toe aan `llms.txt`.
-5. Werk `lastmod` in `sitemap-site.xml` en "Bijgewerkt" op de pagina bij.
+5. Werk `lastmod` in `sitemap-site.xml` bij, "Bijgewerkt" op de pagina, en draai daarna `python tools/build-sitemap.py`.
 
 ## Nog te doen na de lancering van beleggerkees.nl
 

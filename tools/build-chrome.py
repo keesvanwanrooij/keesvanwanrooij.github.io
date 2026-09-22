@@ -29,6 +29,7 @@ PAGES = {
     "projecten/index.html": ("", "projecten"),
     "projecten/elektrotechniek/index.html": ("", "projecten"),
     "projecten/cv-ketels/index.html": ("", "projecten"),
+    "sitemap/index.html": ("", ""),
     "404.html": ("", ""),
 }
 
@@ -122,6 +123,7 @@ def footer(current):
         '      </div>\n'
         '      <div class="footer-legal">\n'
         '        <p>© 2026 Kees van Wanrooij. Belegger Kees is geen geregistreerde beleggingsonderneming bij de AFM.</p>\n'
+        '        <p><a href="/sitemap/">Sitemap</a></p>\n'
         '      </div>\n'
         '    </div>\n'
         '  </footer>'
