@@ -24,6 +24,7 @@ PAGES = {
     "index.html": ("", "home"),
     "beleggen/index.html": ("beleggen", "beleggen"),
     "welke-kees/index.html": ("", "welke-kees"),
+    "veelgestelde-vragen/index.html": ("", "faq"),
     "over-mij/index.html": ("over-mij", "over-mij"),
     "projecten/index.html": ("", "projecten"),
     "projecten/elektrotechniek/index.html": ("", "projecten"),
@@ -51,10 +52,11 @@ ECO = [
         ("beleggen", "/beleggen/", "Beleggen met GARP en NLP"),
         ("welke-kees", "/welke-kees/", "Welke Kees is Belegger Kees?"),
     ]),
-    ("Op Belegger Kees", [
+    ("Meer over beleggen", [
         ("bk-beginners", "https://beleggerkees.nl/beleggen-voor-beginners", "Beleggen voor beginners"),
         ("bk-mindset", "https://beleggerkees.nl/mindset-en-beleggen", "Mindset en beleggen"),
         ("bk-ai", "https://beleggerkees.nl/beleggen-met-ai", "Beleggen met AI"),
+        ("faq", "/veelgestelde-vragen/", "Veelgestelde vragen"),
     ]),
     ("Hobby projecten", [
         ("projecten", "/projecten/", "Alle projecten"),
@@ -82,7 +84,7 @@ def header(current):
         '      <nav class="site-nav" aria-label="Hoofdmenu">\n'
         '        <ul>\n' + "\n".join(items) + '\n        </ul>\n'
         '      </nav>\n'
-        f'      <a class="btn btn--secondary btn--compact header-cta" href="{QUIZ}">Doe de beleggersquiz</a>\n'
+        f'      <a class="btn btn--secondary btn--compact header-cta" href="{QUIZ}">Beleggersquiz</a>\n'
         '    </div>\n'
         '  </header>'
     )
