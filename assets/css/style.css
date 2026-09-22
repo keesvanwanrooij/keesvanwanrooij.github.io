@@ -150,6 +150,12 @@ p:last-child { margin-bottom: 0; }
 .brand .dot { color: var(--red); }
 .site-nav { margin-left: auto; }
 .site-nav ul { display: flex; flex-wrap: wrap; gap: 4px 24px; margin: 0; padding: 0; list-style: none; }
+@media (max-width: 640px) {
+  .header-inner .brand { order: 1; }
+  .header-inner .header-cta { order: 2; margin-left: auto; }
+  .header-inner .site-nav { order: 3; flex: 1 0 100%; margin-left: 0; }
+  .header-inner .site-nav ul { gap: 4px 20px; }
+}
 .site-nav a { display: inline-block; padding: 6px 0; font-size: 1rem; font-weight: 500; text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--red); }
 
@@ -202,7 +208,7 @@ p:last-child { margin-bottom: 0; }
 .btn--primary:hover { background: var(--red-hover); transform: translateY(-1px); }
 .btn--secondary { background: var(--carbon); }
 .btn--secondary:hover { background: #000; transform: translateY(-1px); }
-.btn--compact { padding: 11px 20px; font-size: 0.9375rem; }
+.btn--compact { padding: 10px 18px; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
 @media (max-width: 480px) { .btn { width: 100%; } .btn--compact { width: auto; } }
 
 /* Kaarten */
