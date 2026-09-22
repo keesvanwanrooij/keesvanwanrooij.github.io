@@ -7,10 +7,11 @@
 # robots.txt wordt alleen vanaf de hostroot gelezen, dus die van de drie
 # andere repository's wordt door zoekmachines genegeerd; alleen deze telt.
 #
-# sitemap.xml hier is een sitemapindex (geen losse paginalijst): hij wijst
-# naar sitemap-site.xml (de pagina's van deze site) en naar de eigen
-# sitemap.xml van elk van de andere drie sites. Zo is er één sitemap om in
-# Search Console te registreren, en telt elke pagina van het hele domein mee.
+# sitemap.xml hier is één platte lijst met alle pagina's van het hele
+# domein: deze site plus de Belegger Kees Methode en de twee cursussen.
+# tools/build-sitemap.py haalt de andere drie repository's live op en zet
+# alles samen, want de hub heeft geen lokale toegang tot hun broncode.
+# Registreer alleen dit ene bestand in Search Console.
 
 User-agent: *
 Allow: /

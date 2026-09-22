@@ -385,8 +385,22 @@ blockquote p { margin: 0; }
 .footer-grid ul { margin: 0; padding: 0; list-style: none; }
 .footer-grid a[aria-current] { font-weight: 600; text-decoration-color: var(--red); }
 .footer-grid li { margin-bottom: 8px; font-size: 1rem; }
-.footer-legal { padding-top: 24px; border-top: 1px solid var(--line); font-size: 0.9375rem; color: var(--muted); }
-.footer-legal p { margin: 0 0 6px; max-width: none; }
+.footer-legal { padding-top: 24px; border-top: 1px solid var(--line); font-size: 0.9375rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between; }
+.footer-legal p { margin: 0; max-width: none; }
+.footer-legal a { color: inherit; }
+
+/* Sitemap-pagina: dicht opeengepakte lijst, want dit is een overzicht, geen leesartikel. */
+.sitemap-grid { display: flex; flex-direction: column; gap: 56px; }
+.sitemap-site h2 { margin-bottom: 4px; }
+.sitemap-site h2 .small { font-weight: 400; }
+.sitemap-site h3 { margin: 28px 0 8px; font-size: 1.0625rem; color: var(--muted); }
+.sitemap-site ul { margin: 0; padding: 0; list-style: none; columns: 1; }
+@media (min-width: 640px) { .sitemap-site ul { columns: 2; column-gap: 32px; } }
+@media (min-width: 900px) { .sitemap-site ul { columns: 3; column-gap: 32px; } }
+@media (min-width: 1200px) { .sitemap-site ul { columns: 4; column-gap: 32px; } }
+.sitemap-site li { margin-bottom: 6px; font-size: 0.9375rem; break-inside: avoid; }
+.sitemap-site a { text-decoration: none; }
+.sitemap-site a:hover { text-decoration: underline; text-decoration-color: var(--red); }
 
 /* Beweging: nooit langer dan 0,2 seconde, en uit bij de voorkeur voor minder beweging */
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,44 @@
+name: Sitemap verversen
+
+# Bouwt sitemap.xml en sitemap/index.html opnieuw met tools/build-sitemap.py.
+# Dat script haalt de sitemap en de paginatitels van de drie andere sites
+# (belegger-kees-methode, cursus-elektrotechniek, cursus-cv-ketels) live op,
+# dus dit draait los van wanneer die repository's zelf wijzigen.
+#
+# Vereist dat Actions in deze repository schrijfrechten heeft:
+# Settings -> Actions -> General -> Workflow permissions -> "Read and write
+# permissions". Staat dat nog op alleen-lezen, dan faalt de commit-stap
+# hieronder zichtbaar in de log, zonder de rest van de site te raken.
+
+on:
+  schedule:
+    - cron: "17 4 * * *" # elke dag rond 04:17 UTC, buiten de drukte om
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sitemap opnieuw bouwen
+        run: python tools/build-sitemap.py
+
+      - name: Wijzigingen committen als er iets veranderd is
+        run: |
+          if git diff --quiet -- sitemap.xml sitemap/index.html; then
+            echo "Geen wijzigingen."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml sitemap/index.html
+          git commit -m "Ververs sitemap.xml en sitemap/ (automatisch)"
+          git push
