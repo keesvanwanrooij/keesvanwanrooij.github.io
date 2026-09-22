@@ -3,9 +3,14 @@ Zet de gedeelde kop (navigatie) en voet (ecosysteem) in alle pagina's.
 
 In elke pagina staan de plaatshouders <!-- site:header --> en <!-- site:footer -->
 (of het reeds gegenereerde blok tussen <!-- site:header:start/end -->). Dit script vult ze.
-De ecosysteemblokken in de voet zijn hetzelfde in alle vier de repositories:
-  www.keesvanwanrooij.nl (repo keesvanwanrooij.github.io), belegger-kees-methode, cursus-elektrotechniek, cursus-cv-ketels.
-Wijzig je de lijst hieronder, pas dan ook de drie andere repositories aan.
+
+De site gaat over beleggen. Het hoofdmenu bevat daarom alleen Beleggen, Methode
+en Over mij, met rechts een knop naar de quiz op beleggerkees.nl. Wat niet over
+beleggen gaat staat onder /projecten/ en krijgt alleen een kolom in de voet.
+
+Het ecosysteemblok in de voet is gelijk in deze hub en in belegger-kees-methode
+(daar in site/build.py, constante ECO). De twee cursussites hebben een eigen
+variant in Views.footer(). Elke kolom houdt maximaal vier links.
 
 Gebruik: python tools/build-chrome.py
 """
@@ -18,21 +23,23 @@ ROOT = Path(__file__).resolve().parent.parent
 PAGES = {
     "index.html": ("", "home"),
     "beleggen/index.html": ("beleggen", "beleggen"),
-    "cursussen/index.html": ("cursussen", ""),
-    "elektrotechniek/index.html": ("cursussen", ""),
-    "cv-ketels/index.html": ("cursussen", ""),
+    "welke-kees/index.html": ("", "welke-kees"),
     "over-mij/index.html": ("over-mij", "over-mij"),
+    "projecten/index.html": ("", "projecten"),
+    "projecten/elektrotechniek/index.html": ("", "projecten"),
+    "projecten/cv-ketels/index.html": ("", "projecten"),
     "404.html": ("", ""),
 }
 
-METHODE = "https://www.keesvanwanrooij.nl/belegger-kees-methode/"
-ELEKTRO = "https://www.keesvanwanrooij.nl/cursus-elektrotechniek/"
-CV = "https://www.keesvanwanrooij.nl/cursus-cv-ketels/"
+HUB = "https://www.keesvanwanrooij.nl"
+METHODE = HUB + "/belegger-kees-methode/"
+ELEKTRO = HUB + "/cursus-elektrotechniek/"
+CV = HUB + "/cursus-cv-ketels/"
+QUIZ = "https://beleggerkees.nl/quiz"
 
 NAV = [
     ("beleggen", "/beleggen/", "Beleggen"),
     ("methode", METHODE, "Methode"),
-    ("cursussen", "/cursussen/", "Cursussen"),
     ("over-mij", "/over-mij/", "Over mij"),
 ]
 
@@ -42,13 +49,19 @@ ECO = [
         ("belegger-kees", "https://beleggerkees.nl", "Belegger Kees"),
         ("methode", METHODE, "Belegger Kees Methode"),
         ("beleggen", "/beleggen/", "Beleggen met GARP en NLP"),
+        ("welke-kees", "/welke-kees/", "Welke Kees is Belegger Kees?"),
     ]),
-    ("Gratis cursussen", [
+    ("Op Belegger Kees", [
+        ("bk-beginners", "https://beleggerkees.nl/beleggen-voor-beginners", "Beleggen voor beginners"),
+        ("bk-mindset", "https://beleggerkees.nl/mindset-en-beleggen", "Mindset en beleggen"),
+        ("bk-ai", "https://beleggerkees.nl/beleggen-met-ai", "Beleggen met AI"),
+    ]),
+    ("Hobby projecten", [
+        ("projecten", "/projecten/", "Alle projecten"),
         ("elektro", ELEKTRO, "Cursus Elektrotechniek"),
         ("cv", CV, "Cursus CV-ketels"),
     ]),
     ("Kees van Wanrooij", [
-        ("home", "/", "Home"),
         ("over-mij", "/over-mij/", "Over mij"),
         ("linkedin", "https://www.linkedin.com/in/keesvanwanrooij/", "LinkedIn"),
         ("instagram", "https://www.instagram.com/beleggerkees/", "Instagram"),
@@ -69,6 +82,7 @@ def header(current):
         '      <nav class="site-nav" aria-label="Hoofdmenu">\n'
         '        <ul>\n' + "\n".join(items) + '\n        </ul>\n'
         '      </nav>\n'
+        f'      <a class="btn btn--secondary btn--compact header-cta" href="{QUIZ}">Doe de beleggersquiz</a>\n'
         '    </div>\n'
         '  </header>'
     )
@@ -91,9 +105,9 @@ def footer(current):
         '  <footer class="site-footer">\n'
         '    <div class="wrap">\n'
         '      <div class="footer-grid">\n'
-        '        <div>\n'
+        '        <div class="footer-about">\n'
         '          <p class="footer-brand">Kees van Wanrooij<span class="dot" aria-hidden="true">.</span></p>\n'
-        '          <p class="small">Belegger en NLP-practitioner. Oprichter van Belegger Kees. Educatie, geen beleggingsadvies.</p>\n'
+        '          <p class="small">Ondernemer, belegger en NLP-practitioner. Oprichter van Belegger Kees. Educatie, geen beleggingsadvies.</p>\n'
         '        </div>\n' + "\n".join(cols) + '\n'
         '      </div>\n'
         '      <div class="footer-legal">\n'
@@ -117,5 +131,5 @@ for page, (nav_key, foot_key) in PAGES.items():
     t = p.read_text(encoding="utf-8")
     t = fill(t, "header", header(nav_key))
     t = fill(t, "footer", footer(foot_key))
-    p.write_text(t, encoding="utf-8")
+    p.write_text(t, encoding="utf-8", newline="\n")
     print("bijgewerkt:", page)

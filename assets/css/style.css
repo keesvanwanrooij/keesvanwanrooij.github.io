@@ -148,6 +148,7 @@ p:last-child { margin-bottom: 0; }
 .header-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px; padding-block: 18px; }
 .brand { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; text-decoration: none; }
 .brand .dot { color: var(--red); }
+.site-nav { margin-left: auto; }
 .site-nav ul { display: flex; flex-wrap: wrap; gap: 4px 24px; margin: 0; padding: 0; list-style: none; }
 .site-nav a { display: inline-block; padding: 6px 0; font-size: 1rem; font-weight: 500; text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--red); }
@@ -201,7 +202,8 @@ p:last-child { margin-bottom: 0; }
 .btn--primary:hover { background: var(--red-hover); transform: translateY(-1px); }
 .btn--secondary { background: var(--carbon); }
 .btn--secondary:hover { background: #000; transform: translateY(-1px); }
-@media (max-width: 480px) { .btn { width: 100%; } }
+.btn--compact { padding: 11px 20px; font-size: 0.9375rem; }
+@media (max-width: 480px) { .btn { width: 100%; } .btn--compact { width: auto; } }
 
 /* Kaarten */
 
@@ -332,8 +334,12 @@ blockquote p { margin: 0; }
 
 .site-footer { padding-block: 60px 40px; border-top: 1px solid var(--line); background: var(--white); }
 .footer-grid { display: grid; gap: 40px; margin-bottom: 40px; }
-@media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 48px; } }
-@media (min-width: 1000px) { .footer-grid { grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 48px; } }
+@media (min-width: 768px) {
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 48px; }
+  .footer-about { grid-column: 1 / -1; }
+  .footer-about .small { max-width: 60ch; }
+}
+@media (min-width: 1000px) { .footer-grid { grid-template-columns: repeat(4, 1fr); gap: 40px 48px; } }
 .footer-brand { margin: 0 0 12px; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; }
 .footer-brand .dot { color: var(--red); }
 .footer-grid h2 { margin-bottom: 16px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }

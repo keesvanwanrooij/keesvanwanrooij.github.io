@@ -41,7 +41,7 @@
         "url": "https://www.keesvanwanrooij.nl/over-mij/",
         "name": "Over Kees van Wanrooij",
         "inLanguage": "nl-NL",
-        "dateModified": "2026-09-21",
+        "dateModified": "2026-09-22",
         "isPartOf": { "@id": "https://www.keesvanwanrooij.nl/#website" },
         "mainEntity": { "@id": "https://www.keesvanwanrooij.nl/#kees" }
       },
@@ -49,21 +49,27 @@
         "@type": "Person",
         "@id": "https://www.keesvanwanrooij.nl/#kees",
         "name": "Kees van Wanrooij",
+        "alternateName": ["Belegger Kees", "Kees van Wanrooij (Belegger Kees)"],
         "givenName": "Kees",
         "familyName": "van Wanrooij",
         "url": "https://www.keesvanwanrooij.nl/",
+        "mainEntityOfPage": { "@id": "https://www.keesvanwanrooij.nl/over-mij/#pagina" },
         "image": "https://www.keesvanwanrooij.nl/assets/img/kees-van-wanrooij-800.jpg",
         "jobTitle": "Oprichter",
-        "description": "Belegger en NLP-practitioner, oprichter van Belegger Kees.",
+        "description": "Ondernemer, belegger en NLP-practitioner, oprichter van Belegger Kees.",
+        "disambiguatingDescription": "Kees van Wanrooij is de belegger achter het platform Belegger Kees. Hij is niet Kees de Kort (macro-econoom en beursanalist), niet Kees Koolen (investeerder en voormalig CEO van Booking.com) en niet Kees Vermeer (auteur van De Luie Belegger).",
         "nationality": { "@type": "Country", "name": "Nederland" },
-        "worksFor": { "@type": "Organization", "name": "Belegger Kees", "url": "https://beleggerkees.nl" },
+        "email": "info@beleggerkees.nl",
+        "worksFor": { "@type": "Organization", "@id": "https://beleggerkees.nl/#organisatie", "name": "Belegger Kees", "url": "https://beleggerkees.nl" },
         "alumniOf": { "@type": "CollegeOrUniversity", "name": "Technische Universiteit Delft" },
-        "knowsAbout": ["Beleggen", "GARP", "Growth at a Reasonable Price", "Neuro-Linguïstisch Programmeren", "NLP voor beleggers", "Beleggingspsychologie", "Vermogensopbouw", "Fundamentele analyse", "Elektrotechniek", "CV-ketels"],
+        "knowsAbout": ["Beleggen", "Aandelen", "GARP", "Growth at a Reasonable Price", "Fundamentele aandelenanalyse", "Waardering en DCF", "Neuro-Linguïstisch Programmeren", "NLP voor beleggers", "Beleggingspsychologie", "Vermogensopbouw", "Insidertransacties"],
         "sameAs": [
+          "https://beleggerkees.nl",
           "https://www.linkedin.com/in/keesvanwanrooij/",
           "https://www.instagram.com/beleggerkees/",
           "https://github.com/keesvanwanrooij"
-        ]
+        ],
+        "subjectOf": { "@id": "https://www.keesvanwanrooij.nl/welke-kees/#pagina" }
       },
       {
         "@type": "BreadcrumbList",
@@ -87,10 +93,10 @@
         <ul>
           <li><a href="/beleggen/">Beleggen</a></li>
           <li><a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Methode</a></li>
-          <li><a href="/cursussen/">Cursussen</a></li>
           <li><a href="/over-mij/" aria-current="page">Over mij</a></li>
         </ul>
       </nav>
+      <a class="btn btn--secondary btn--compact header-cta" href="https://beleggerkees.nl/quiz">Doe de beleggersquiz</a>
     </div>
   </header>
   <!-- site:header:end -->
@@ -110,7 +116,7 @@
         <div class="portrait">
           <picture>
             <source type="image/webp" srcset="/assets/img/kees-van-wanrooij-480.webp 480w, /assets/img/kees-van-wanrooij-800.webp 800w" sizes="(min-width: 900px) 30vw, 320px">
-            <img src="/assets/img/kees-van-wanrooij-800.jpg" alt="Kees van Wanrooij, oprichter van Belegger Kees" width="800" height="1000" fetchpriority="high">
+            <img src="/assets/img/kees-van-wanrooij-800.jpg" alt="Kees van Wanrooij, belegger en NLP-practitioner en oprichter van Belegger Kees" width="800" height="1000" fetchpriority="high">
           </picture>
         </div>
       </div>
@@ -128,6 +134,7 @@
           <div><dt>NLP</dt><dd><span class="mono">2023</span> · NLP Practitioner afgerond</dd></div>
           <div><dt>Beleggen</dt><dd>Sinds mijn 22ste</dd></div>
           <div><dt>Onderwerpen</dt><dd>Fundamentele aandelenanalyse (GARP), NLP toegepast op beleggen, beleggingspsychologie en vermogensopbouw</dd></div>
+          <div><dt>Ook bekend als</dt><dd>Belegger Kees. <a href="/welke-kees/">Welke Kees ben ik precies?</a></dd></div>
           <div><dt>Toezicht</dt><dd>Ik ben een particuliere belegger en geen geregistreerde beleggingsonderneming bij de AFM</dd></div>
         </dl>
       </div>
@@ -181,7 +188,8 @@
         <h2 id="werkwijze">Hoe ik werk en publiceer</h2>
         <p>Wat ik publiceer, publiceer ik navolgbaar: met bronnen en datums, met mijn positie en belangen op de publicatiedatum, en zonder koersdoel of koopadvies. Een fout corrigeer ik zichtbaar. Mijn analyses laten zien hoe ik denk, niet wat jij moet doen.</p>
         <p>Ik gebruik AI om te zoeken, te ordenen, na te rekenen en tegen te denken. De cijfers die een waardering dragen controleer ik zelf bij de bron, en het oordeel is van mij.</p>
-        <p>Naast Belegger Kees maak ik de gratis cursussen <a href="/elektrotechniek/">Elektrotechniek</a> en <a href="/cv-ketels/">CV-ketels</a>. Ze komen uit mijn technische achtergrond en staan los van het beleggen. Mijn <a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Belegger Kees Methode</a> staat openbaar online.</p>
+        <p>Mijn <a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Belegger Kees Methode</a> staat openbaar online, met de broncode erbij. Naast het beleggen bouw ik een paar <a href="/projecten/">hobby projecten</a>, zoals twee gratis cursussen uit mijn technische achtergrond. Die staan los van Belegger Kees.</p>
+        <p>Word ik verward met een andere Kees uit de beleggingswereld? Op <a href="/welke-kees/">Welke Kees is Belegger Kees?</a> staat wie ik wel en niet ben.</p>
       </div>
     </section>
 
@@ -206,7 +214,7 @@
           <strong id="disclaimer">Disclaimer</strong>
           <p>De content op Belegger Kees is uitsluitend bedoeld voor educatieve doeleinden en vormt geen persoonlijk beleggingsadvies. Beleggen brengt risico's met zich mee. De waarde van beleggingen kan fluctueren en je kunt je inleg verliezen. Resultaten uit het verleden bieden geen garantie voor de toekomst. Raadpleeg een erkende financieel adviseur voor advies op maat. Belegger Kees is geen geregistreerde beleggingsonderneming bij de AFM.</p>
         </div>
-        <p class="small" style="margin-top:24px">Bijgewerkt: 21 september 2026. Auteur: Kees van Wanrooij.</p>
+        <p class="small" style="margin-top:24px">Bijgewerkt: 22 september 2026. Auteur: Kees van Wanrooij.</p>
       </div>
     </section>
   </main>
@@ -215,9 +223,9 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
-        <div>
+        <div class="footer-about">
           <p class="footer-brand">Kees van Wanrooij<span class="dot" aria-hidden="true">.</span></p>
-          <p class="small">Belegger en NLP-practitioner. Oprichter van Belegger Kees. Educatie, geen beleggingsadvies.</p>
+          <p class="small">Ondernemer, belegger en NLP-practitioner. Oprichter van Belegger Kees. Educatie, geen beleggingsadvies.</p>
         </div>
         <nav aria-label="Beleggen">
           <h2>Beleggen</h2>
@@ -225,11 +233,21 @@
             <li><a href="https://beleggerkees.nl">Belegger Kees</a></li>
             <li><a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Belegger Kees Methode</a></li>
             <li><a href="/beleggen/">Beleggen met GARP en NLP</a></li>
+            <li><a href="/welke-kees/">Welke Kees is Belegger Kees?</a></li>
           </ul>
         </nav>
-        <nav aria-label="Gratis cursussen">
-          <h2>Gratis cursussen</h2>
+        <nav aria-label="Op Belegger Kees">
+          <h2>Op Belegger Kees</h2>
           <ul>
+            <li><a href="https://beleggerkees.nl/beleggen-voor-beginners">Beleggen voor beginners</a></li>
+            <li><a href="https://beleggerkees.nl/mindset-en-beleggen">Mindset en beleggen</a></li>
+            <li><a href="https://beleggerkees.nl/beleggen-met-ai">Beleggen met AI</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Hobby projecten">
+          <h2>Hobby projecten</h2>
+          <ul>
+            <li><a href="/projecten/">Alle projecten</a></li>
             <li><a href="https://www.keesvanwanrooij.nl/cursus-elektrotechniek/">Cursus Elektrotechniek</a></li>
             <li><a href="https://www.keesvanwanrooij.nl/cursus-cv-ketels/">Cursus CV-ketels</a></li>
           </ul>
@@ -237,7 +255,6 @@
         <nav aria-label="Kees van Wanrooij">
           <h2>Kees van Wanrooij</h2>
           <ul>
-            <li><a href="/">Home</a></li>
             <li><a href="/over-mij/" aria-current="true">Over mij</a></li>
             <li><a href="https://www.linkedin.com/in/keesvanwanrooij/">LinkedIn</a></li>
             <li><a href="https://www.instagram.com/beleggerkees/">Instagram</a></li>
