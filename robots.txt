@@ -4,8 +4,13 @@
 #   /belegger-kees-methode/    belegger-kees-methode
 #   /cursus-elektrotechniek/   cursus-elektrotechniek     (hobby project)
 #   /cursus-cv-ketels/         cursus-cv-ketels           (hobby project)
-# robots.txt wordt alleen vanaf de hostroot gelezen, dus alle vier de sitemaps
-# staan hier. Elke site heeft daarnaast een eigen sitemap met zijn eigen pagina's.
+# robots.txt wordt alleen vanaf de hostroot gelezen, dus die van de drie
+# andere repository's wordt door zoekmachines genegeerd; alleen deze telt.
+#
+# sitemap.xml hier is een sitemapindex (geen losse paginalijst): hij wijst
+# naar sitemap-site.xml (de pagina's van deze site) en naar de eigen
+# sitemap.xml van elk van de andere drie sites. Zo is er één sitemap om in
+# Search Console te registreren, en telt elke pagina van het hele domein mee.
 
 User-agent: *
 Allow: /
@@ -44,6 +49,3 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://www.keesvanwanrooij.nl/sitemap.xml
-Sitemap: https://www.keesvanwanrooij.nl/belegger-kees-methode/sitemap.xml
-Sitemap: https://www.keesvanwanrooij.nl/cursus-elektrotechniek/sitemap.xml
-Sitemap: https://www.keesvanwanrooij.nl/cursus-cv-ketels/sitemap.xml

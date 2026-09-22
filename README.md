@@ -33,6 +33,7 @@ Gewone HTML en CSS, geen JavaScript en geen afhankelijkheden. Kop en voet komen 
 index.html                             home
 beleggen/index.html                    Beleggen met GARP en NLP (met FAQ)
 welke-kees/index.html                  wie Belegger Kees is, en wie niet (met FAQ)
+veelgestelde-vragen/index.html         alle FAQ's op een plek (met FAQ-schema)
 over-mij/index.html                    achtergrond en verhaal
 projecten/index.html                   overzicht van de hobby projecten
 projecten/elektrotechniek/index.html   infopagina cursus Elektrotechniek
@@ -46,7 +47,9 @@ assets/fonts/               Inter en JetBrains Mono, zelf gehost
 assets/img/                 portret en deelafbeelding (og.png)
 tools/og.html               bron van og.png, zie het commentaar in het bestand
 tools/build-chrome.py       zet de gedeelde kop en voet in alle pagina's
-sitemap.xml, robots.txt, llms.txt
+sitemap.xml                 sitemapindex, wijst naar sitemap-site.xml en de drie andere sites
+sitemap-site.xml            de eigen pagina's van deze site
+robots.txt, llms.txt
 ```
 
 Lokaal bekijken:
@@ -59,11 +62,15 @@ Open daarna http://localhost:8123/.
 
 ## Sitemaps en robots.txt
 
-Alleen de `robots.txt` in de root van het domein wordt door zoekmachines gelezen. Die staat in deze repository en noemt de sitemaps van alle vier de sites. De `robots.txt` in de submappen van de cursussen en de methode is dus alleen informatief.
+Alleen de `robots.txt` in de root van het domein wordt door zoekmachines gelezen. Die staat in deze repository. De `robots.txt` in de submappen van de cursussen en de methode is dus alleen informatief en wordt genegeerd.
 
-De `sitemap.xml` van de hub bevat uitsluitend de eigen pagina's. De andere drie repository's leveren hun eigen sitemap; die staan in `robots.txt` en hoeven hier niet nog eens genoemd te worden.
+`sitemap.xml` hier is een **sitemapindex**, geen paginalijst: hij wijst naar `sitemap-site.xml` (de eigen pagina's van deze site) en naar de `sitemap.xml` van elk van de andere drie repository's. Dat is bewust: die drie sites samen hebben ruim 300 pagina's, die de hub niet zelf kan bijhouden (ze staan in andere repository's met een eigen build). Een sitemapindex laat Google en de andere zoekmachines zelf de drie kindsitemaps ophalen.
 
-De doorstuurpagina's (`cursussen/`, `elektrotechniek/`, `cv-ketels/`) staan op `noindex, follow` met een `canonical` naar de nieuwe URL en een meta refresh. GitHub Pages kan geen serverredirect, dus dit is de dichtstbijzijnde vervanging van een 301. Zet ze niet in de sitemap.
+Dit lost ook op dat de losse sitemaps van de andere sites voorheen nooit gezien werden: `https://www.keesvanwanrooij.nl/belegger-kees-methode/sitemap.xml` stond alleen als aparte `Sitemap:`-regel in `robots.txt`, maar werd nooit als submap van een geregistreerde sitemap gecrawld. Registreer voortaan alleen `https://www.keesvanwanrooij.nl/sitemap.xml` in Search Console; de submaps volgen vanzelf.
+
+Wijzig je de lijst met sites, werk dan `sitemap.xml` (de vier `<sitemap>`-regels) en de comment in `robots.txt` bij.
+
+De doorstuurpagina's (`cursussen/`, `elektrotechniek/`, `cv-ketels/`) staan op `noindex, follow` met een `canonical` naar de nieuwe URL en een meta refresh. GitHub Pages kan geen serverredirect, dus dit is de dichtstbijzijnde vervanging van een 301. Zet ze niet in `sitemap-site.xml`.
 
 ## Huisstijl en regels
 
@@ -79,7 +86,7 @@ De Belegger Kees Methode is openbaar en staat als Live op de home en op `belegge
 2. Verwijder de regel "Zodra de repository openbaar is, staat hier de link." op `beleggen/index.html`.
 3. Overweeg een eigen pagina `/bk-insider-screener/`, in de root omdat het over beleggen gaat.
 4. Voeg de link toe aan `llms.txt`.
-5. Werk `lastmod` in `sitemap.xml` en "Bijgewerkt" op de pagina bij.
+5. Werk `lastmod` in `sitemap-site.xml` en "Bijgewerkt" op de pagina bij.
 
 ## Nog te doen na de lancering van beleggerkees.nl
 
