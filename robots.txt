@@ -1,3 +1,12 @@
+# www.keesvanwanrooij.nl
+# Deze host bedient vier GitHub Pages repository's onder een domein:
+#   /                          keesvanwanrooij.github.io  (deze site, over beleggen)
+#   /belegger-kees-methode/    belegger-kees-methode
+#   /cursus-elektrotechniek/   cursus-elektrotechniek     (hobby project)
+#   /cursus-cv-ketels/         cursus-cv-ketels           (hobby project)
+# robots.txt wordt alleen vanaf de hostroot gelezen, dus alle vier de sitemaps
+# staan hier. Elke site heeft daarnaast een eigen sitemap met zijn eigen pagina's.
+
 User-agent: *
 Allow: /
 
