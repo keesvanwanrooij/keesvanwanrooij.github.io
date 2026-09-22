@@ -77,14 +77,22 @@ def header(current):
     for key, href, text in NAV:
         cur = ' aria-current="page"' if key == current else ""
         items.append(f'          <li><a href="{href}"{cur}>{text}</a></li>')
+    # Het hamburgermenu is een verborgen checkbox plus een label als knop: puur
+    # CSS (:checked ~ .site-nav), zodat de site zonder JavaScript blijft. De
+    # knop naar de quiz staat binnen <nav>, zodat hij op mobiel meeklapt.
     return (
         '  <header class="site-header">\n'
         '    <div class="wrap header-inner">\n'
         '      <a class="brand" href="/">Kees van Wanrooij<span class="dot" aria-hidden="true">.</span></a>\n'
+        '      <input type="checkbox" id="menu-toggle" class="menu-toggle-input">\n'
+        '      <label class="menu-toggle-btn" for="menu-toggle">\n'
+        '        <span class="menu-toggle-icon" aria-hidden="true"></span>\n'
+        '        <span class="sr-only">Menu</span>\n'
+        '      </label>\n'
         '      <nav class="site-nav" aria-label="Hoofdmenu">\n'
         '        <ul>\n' + "\n".join(items) + '\n        </ul>\n'
+        f'        <a class="btn btn--secondary btn--compact header-cta" href="{QUIZ}">Beleggersquiz</a>\n'
         '      </nav>\n'
-        f'      <a class="btn btn--secondary btn--compact header-cta" href="{QUIZ}">Beleggersquiz</a>\n'
         '    </div>\n'
         '  </header>'
     )
