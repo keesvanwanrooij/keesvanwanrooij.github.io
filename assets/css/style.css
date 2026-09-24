@@ -241,7 +241,7 @@ p:last-child { margin-bottom: 0; }
 .btn--primary:hover { background: var(--red-hover); transform: translateY(-1px); }
 .btn--secondary { background: var(--carbon); }
 .btn--secondary:hover { background: #000; transform: translateY(-1px); }
-.btn--compact { padding: 8px 14px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; }
+.btn--compact { padding: 10px 20px; font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
 @media (max-width: 480px) { .btn { width: 100%; } .btn--compact { width: auto; } }
 
 /* Kaarten */
