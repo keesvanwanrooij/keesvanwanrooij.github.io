@@ -241,7 +241,9 @@ p:last-child { margin-bottom: 0; }
 .btn--primary:hover { background: var(--red-hover); transform: translateY(-1px); }
 .btn--secondary { background: var(--carbon); }
 .btn--secondary:hover { background: #000; transform: translateY(-1px); }
-.btn--compact { padding: 10px 20px; font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+/* .header-cta erbij: .site-nav a (klasse + element) weegt zwaarder dan .btn--compact
+   alleen, dus zonder die extra klasse won de kleine navstijl het altijd van deze knop. */
+.btn--compact, .site-nav a.header-cta { padding: 10px 20px; font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
 @media (max-width: 480px) { .btn { width: 100%; } .btn--compact { width: auto; } }
 
 /* Kaarten */
