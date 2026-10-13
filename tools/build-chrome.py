@@ -60,7 +60,7 @@ ECO = [
     ("Onderzoek en tools", [
         ("insider-scanner", "/insider-scanner/", "Insider Scanner"),
         ("stock-screener", "/stock-screener/", "Stock Screener"),
-        ("seeking-alpha", SEEKING_ALPHA, "Investor Kees op Seeking Alpha"),
+        ("seeking-alpha", SEEKING_ALPHA, "Seeking Alpha"),
     ]),
     ("Kees van Wanrooij", [
         ("over-mij", "/over-mij/", "Over mij"),
