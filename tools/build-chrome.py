@@ -4,13 +4,13 @@ Zet de gedeelde kop (navigatie) en voet (ecosysteem) in alle pagina's.
 In elke pagina staan de plaatshouders <!-- site:header --> en <!-- site:footer -->
 (of het reeds gegenereerde blok tussen <!-- site:header:start/end -->). Dit script vult ze.
 
-De site gaat over beleggen. Het hoofdmenu bevat daarom alleen Beleggen, Methode
-en Over mij, met rechts een knop naar de quiz op beleggerkees.nl. Wat niet over
-beleggen gaat staat onder /projecten/ en krijgt alleen een kolom in de voet.
+De site gaat alleen over beleggen, beleggingspsychologie en NLP. Het hoofdmenu
+bevat daarom Beleggen, Methode en Over mij, met rechts een knop naar de quiz op
+beleggerkees.nl. Wat niet over beleggen gaat, staat niet op deze site: de twee
+cursussen hebben elk een eigen subdomein en worden hier nergens gelinkt.
 
 Het ecosysteemblok in de voet is gelijk in deze hub en in belegger-kees-methode
-(daar in site/build.py, constante ECO). De twee cursussites hebben een eigen
-variant in Views.footer(). Elke kolom houdt maximaal vier links.
+(daar in site/build.py, constante ECO). Elke kolom houdt maximaal vier links.
 
 Gebruik: python tools/build-chrome.py
 """
@@ -26,17 +26,15 @@ PAGES = {
     "welke-kees/index.html": ("", "welke-kees"),
     "veelgestelde-vragen/index.html": ("", "faq"),
     "over-mij/index.html": ("over-mij", "over-mij"),
-    "projecten/index.html": ("", "projecten"),
-    "projecten/elektrotechniek/index.html": ("", "projecten"),
-    "projecten/cv-ketels/index.html": ("", "projecten"),
+    "insider-scanner/index.html": ("", "insider-scanner"),
+    "stock-screener/index.html": ("", "stock-screener"),
     "sitemap/index.html": ("", ""),
     "404.html": ("", ""),
 }
 
 HUB = "https://www.keesvanwanrooij.nl"
 METHODE = HUB + "/belegger-kees-methode/"
-ELEKTRO = HUB + "/cursus-elektrotechniek/"
-CV = HUB + "/cursus-cv-ketels/"
+SEEKING_ALPHA = "https://seekingalpha.com/author/investor-kees"
 QUIZ = "https://beleggerkees.nl/quiz"
 
 NAV = [
@@ -59,10 +57,10 @@ ECO = [
         ("bk-ai", "https://beleggerkees.nl/beleggen-met-ai", "Beleggen met AI"),
         ("faq", "/veelgestelde-vragen/", "Veelgestelde vragen"),
     ]),
-    ("Hobby projecten", [
-        ("projecten", "/projecten/", "Alle projecten"),
-        ("elektro", ELEKTRO, "Cursus Elektrotechniek"),
-        ("cv", CV, "Cursus CV-ketels"),
+    ("Onderzoek en tools", [
+        ("insider-scanner", "/insider-scanner/", "Insider Scanner"),
+        ("stock-screener", "/stock-screener/", "Stock Screener"),
+        ("seeking-alpha", SEEKING_ALPHA, "Investor Kees op Seeking Alpha"),
     ]),
     ("Kees van Wanrooij", [
         ("over-mij", "/over-mij/", "Over mij"),

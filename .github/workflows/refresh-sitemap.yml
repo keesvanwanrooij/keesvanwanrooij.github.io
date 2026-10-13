@@ -1,9 +1,9 @@
 name: Sitemap verversen
 
 # Bouwt sitemap.xml en sitemap/index.html opnieuw met tools/build-sitemap.py.
-# Dat script haalt de sitemap en de paginatitels van de drie andere sites
-# (belegger-kees-methode, cursus-elektrotechniek, cursus-cv-ketels) live op,
-# dus dit draait los van wanneer die repository's zelf wijzigen.
+# Dat script haalt de sitemap en de paginatitels van de Belegger Kees Methode
+# live op, dus dit draait los van wanneer die repository zelf wijzigt. De
+# cursussen staan op eigen subdomeinen en horen niet in deze sitemap.
 #
 # Vereist dat Actions in deze repository schrijfrechten heeft:
 # Settings -> Actions -> General -> Workflow permissions -> "Read and write

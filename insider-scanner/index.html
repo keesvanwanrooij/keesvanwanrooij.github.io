@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insider Scanner: insidertransacties op één plek | Kees van Wanrooij</title>
+  <meta name="description" content="De Insider Scanner zet openbare insidertransacties van de SEC, het Amerikaanse Congres, de AFM en de BaFin op je eigen computer, met een score die je kunt narekenen. In ontwikkeling, later open source.">
+  <link rel="canonical" href="https://www.keesvanwanrooij.nl/insider-scanner/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Kees van Wanrooij">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Kees van Wanrooij">
+  <meta property="og:title" content="Insider Scanner: insidertransacties op één plek">
+  <meta property="og:description" content="Openbare insidertransacties uit de VS, Nederland en Duitsland op je eigen computer, met een score die je kunt narekenen. In ontwikkeling, later open source.">
+  <meta property="og:url" content="https://www.keesvanwanrooij.nl/insider-scanner/">
+  <meta property="og:image" content="https://www.keesvanwanrooij.nl/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kees van Wanrooij, belegger en NLP-practitioner, maker van Belegger Kees">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.keesvanwanrooij.nl/insider-scanner/#pagina",
+        "url": "https://www.keesvanwanrooij.nl/insider-scanner/",
+        "name": "Insider Scanner: insidertransacties op één plek",
+        "inLanguage": "nl-NL",
+        "isPartOf": { "@id": "https://www.keesvanwanrooij.nl/#website" },
+        "about": { "@id": "https://www.keesvanwanrooij.nl/insider-scanner/#tool" },
+        "author": { "@id": "https://www.keesvanwanrooij.nl/#kees" },
+        "dateModified": "2026-10-13"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.keesvanwanrooij.nl/insider-scanner/#tool",
+        "name": "Insider Scanner",
+        "description": "Gratis programma dat openbare insidertransacties van de SEC (Form 3, 4 en 5), het Amerikaanse Huis van Afgevaardigden, de Nederlandse AFM en de Duitse BaFin in een lokale database zet, doorzoekbaar per persoon, bedrijf en periode, met een narekenbare aandachtsscore.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Windows",
+        "inLanguage": "nl",
+        "isAccessibleForFree": true,
+        "creativeWorkStatus": "In ontwikkeling",
+        "author": { "@id": "https://www.keesvanwanrooij.nl/#kees" },
+        "publisher": { "@id": "https://beleggerkees.nl/#organisatie" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.keesvanwanrooij.nl/" },
+          { "@type": "ListItem", "position": 2, "name": "Beleggen", "item": "https://www.keesvanwanrooij.nl/beleggen/" },
+          { "@type": "ListItem", "position": 3, "name": "Insider Scanner", "item": "https://www.keesvanwanrooij.nl/insider-scanner/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is een insideraankoop een koopsignaal?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nee. Een melding is een feit met een datum, een naam en een bedrag. Een bestuurder verkoopt om tientallen redenen die niets met het bedrijf te maken hebben. Een aankoop zegt meer, maar ook dan blijft het een aanleiding voor eigen onderzoek en geen advies." }
+          },
+          {
+            "@type": "Question",
+            "name": "Waarom staan ASML, Shell en Philips niet tussen de Amerikaanse meldingen?",
+            "acceptedAnswer": { "@type": "Answer", "text": "De Amerikaanse meldplicht met Form 4 geldt niet voor een buitenlandse uitgevende instelling, ook niet als die aan een Amerikaanse beurs noteert. Voor Nederlandse bestuurders gebruikt de Insider Scanner daarom het register van de AFM." }
+          },
+          {
+            "@type": "Question",
+            "name": "Wanneer kan ik de Insider Scanner gebruiken?",
+            "acceptedAnswer": { "@type": "Answer", "text": "De Insider Scanner is in ontwikkeling. Hij komt later gratis en open source online, net als de Belegger Kees Methode. Tot die tijd staat op deze pagina de uitleg." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Ga naar de inhoud</a>
+
+  <!-- site:header:start -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">Kees van Wanrooij<span class="dot" aria-hidden="true">.</span></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+      <label class="menu-toggle-btn" for="menu-toggle">
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </label>
+      <nav class="site-nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="/beleggen/">Beleggen</a></li>
+          <li><a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Methode</a></li>
+          <li><a href="/over-mij/">Over mij</a></li>
+        </ul>
+        <a class="btn btn--secondary btn--compact header-cta" href="https://beleggerkees.nl/quiz">Beleggersquiz</a>
+      </nav>
+    </div>
+  </header>
+  <!-- site:header:end -->
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="titel">
+      <div class="wrap">
+        <p class="label">Tool in ontwikkeling</p>
+        <h1 id="titel">Insider Scanner: insidertransacties op één plek</h1>
+        <p class="lead">Bestuurders, commissarissen en grootaandeelhouders moeten hun aan- en verkopen melden. Die meldingen zijn gratis openbaar, maar staan verspreid over duizenden losse formulieren bij verschillende toezichthouders. De Insider Scanner zet ze op je eigen computer en maakt ze doorzoekbaar.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="/beleggen/">Lees hoe ik beleg</a>
+          <a class="btn btn--secondary" href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Lees de methode</a>
+        </div>
+        <p class="small" style="margin-top:24px">Status: in ontwikkeling. De Insider Scanner komt later gratis en open source online, net als de Belegger Kees Methode. Tot die tijd staat hier de uitleg.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="wat">
+      <div class="wrap prose">
+        <h2 id="wat">Wat is een insidertransactie?</h2>
+        <p>Een insidertransactie is een aan- of verkoop van aandelen door iemand die van binnenuit naar een beursgenoteerd bedrijf kijkt: een bestuurder, een commissaris of een grootaandeelhouder. Die persoon moet de transactie melden bij de toezichthouder, en die melding wordt openbaar. In de Verenigde Staten gebeurt dat met een Form 4 bij de SEC, in Nederland bij de AFM.</p>
+        <p>Voor mij is zo'n melding een feit met een datum, een naam en een bedrag. Het is geen koopsignaal. Een bestuurder verkoopt om tientallen redenen die niets met het bedrijf te maken hebben, zoals een huis, een scheiding of een belastingaanslag. Een aankoop zegt meer, want daar is maar één reden voor. Ook dan is het een aanleiding om verder te zoeken, geen conclusie.</p>
+        <blockquote>
+          <p>Data levert het beeld. Emotie bepaalt hoe we dat beeld lezen, en of we het plan uitvoeren.</p>
+        </blockquote>
+        <p>Daarom staat bij elke score wat hij niet kan zien, en staat er nergens wat je zou moeten doen. Wat je met een melding doet, is een beslissing van jou.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="bronnen">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="bronnen">Welke meldingen erin zitten</h2>
+          <p class="lead">Eén opdracht haalt alles binnen vanaf 1 januari 2019 en houdt het daarna elke ochtend bij. Frankrijk, België en het Verenigd Koninkrijk staan op de planning.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Verenigde Staten</dt><dd>SEC Form 3, 4 en 5: bestuurders, commissarissen en grootaandeelhouders van elke Amerikaanse beursgenoteerde onderneming. Meldtermijn: <span class="mono">2</span> werkdagen.</dd></div>
+          <div><dt>Amerikaans Congres</dt><dd>De transactiemeldingen van leden van het Huis van Afgevaardigden onder de STOCK Act, met een bandbreedte in plaats van een bedrag. Meldtermijn: <span class="mono">30</span> tot <span class="mono">45</span> dagen.</dd></div>
+          <div><dt>Nederland</dt><dd>Het register van de AFM: bestuurders en commissarissen van Nederlandse beursgenoteerde ondernemingen. Meldtermijn: <span class="mono">3</span> werkdagen.</dd></div>
+          <div><dt>Duitsland</dt><dd>De database van de BaFin. Die bron bewaart zelf maar twaalf maanden, dus wat de scanner vandaag ophaalt, is de geschiedenis die je later nog hebt.</dd></div>
+        </dl>
+        <p style="margin-top:32px">Dat verschil in meldtermijn bepaalt hoeveel je aan een melding hebt. Daarom begint de scanner bij Form 4 en niet bij de congresmeldingen waar de meeste aandacht naartoe gaat.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="kan">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="kan">Wat je ermee kunt</h2>
+          <p class="lead">Alles draait op je eigen computer. Geen account, geen sleutel, geen abonnement, en er gaat geen gegeven van jou naar buiten.</p>
+        </div>
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Zoeken per persoon en per bedrijf</h3>
+            <p>Een pagina per melder: wat koopt deze bestuurder, hoe vaak en met welke timing. En een pagina per bedrijf: wie handelt er in dit aandeel en hoe zit het eigendom in elkaar. Ook een klein fonds dat nergens in een top honderd staat.</p>
+          </article>
+          <article class="card">
+            <h3>Clusters zien</h3>
+            <p>Meerdere insiders die binnen dertig dagen rond elkaar dezelfde kant op gingen. Eén aankoop kan toeval zijn. Drie bestuurders die tegelijk bijkopen, is een reden om de jaarcijfers erbij te pakken.</p>
+          </article>
+          <article class="card">
+            <h3>De portefeuille van een melder</h3>
+            <p>Wat er gebeurde met de stukken die iemand meldde, als lijn naast de S&amp;P 500 over dezelfde periode. Zo zie je of een beweging van de keuzes kwam of van de markt. Het is niet het vermogen van die persoon en niet zijn rendement.</p>
+          </article>
+          <article class="card">
+            <h3>Je eigen lijst en export</h3>
+            <p>Je houdt je eigen namen en tickers bij, op je eigen computer. Alles is te exporteren naar Excel als CSV, of als Parquet voor je eigen script.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="score">
+      <div class="wrap prose">
+        <h2 id="score">Een score die je kunt narekenen</h2>
+        <p>Elke melding krijgt een aandachtsscore van 0 tot 100. Die meet hoe ongebruikelijk een melding is, en kijkt naar zes dingen:</p>
+        <ul class="dash-list">
+          <li>het soort transactie, bijvoorbeeld een koop op de beurs;</li>
+          <li>hoeveel het belang van die persoon groeide of kromp;</li>
+          <li>het bedrag;</li>
+          <li>de rol van de melder;</li>
+          <li>of er meer insiders tegelijk dezelfde kant op gingen;</li>
+          <li>of de melding afwijkt van wat die persoon normaal doet.</li>
+        </ul>
+        <p>Bij elke score staat welk onderdeel hoeveel punten gaf, zodat je hem kunt natellen. De weging staat in open bestanden die je zelf kunt aanpassen.</p>
+        <p>De score zegt niets over de waarde van een aandeel en niets over wat jij zou moeten doen. Hij sorteert een lijst van honderden meldingen per dag, zodat ik mijn aandacht kan richten. Meer is het niet.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="grenzen">
+      <div class="wrap prose">
+        <h2 id="grenzen">Wat de data niet laat zien</h2>
+        <p><strong>ASML, Shell en Philips dienen geen Form 4 in.</strong> De Amerikaanse meldplicht geldt niet voor een buitenlandse uitgevende instelling, ook niet als die aan een Amerikaanse beurs noteert. Voor Nederlandse bestuurders is er daarom het register van de AFM.</p>
+        <p><strong>En dat register vult het gat niet helemaal.</strong> Bij een controle in september 2026 ontbraken veertien van de dertig AEX-fondsen helemaal in het register, ook bekende namen. Dat ligt niet aan het ophalen: de bron heeft die meldingen niet. Het register geeft bovendien alleen de transactiedatum, niet de datum van de melding.</p>
+        <p>De data komt van derden en kan fouten bevatten of achterlopen. Daarom staat bij elke melding het adres van het originele document, zodat je hem zelf bij de bron kunt controleren.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="plek">
+      <div class="wrap prose">
+        <h2 id="plek">Waar de scanner in mijn werkwijze past</h2>
+        <p>In de <a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Belegger Kees Methode</a> beoordeel ik het bestuur van een bedrijf op wat het belooft tegenover wat het waarmaakt, op kapitaalallocatie en op eigen belang. Wat bestuurders met hun eigen aandelen doen, hoort bij dat laatste. De Insider Scanner maakt die vraag in een paar seconden te beantwoorden, in plaats van in een avond formulieren lezen.</p>
+        <p>Ik bouw hem in de eerste plaats voor mezelf, omdat ik hem gebruik in mijn eigen onderzoek. Er zijn diensten die honderden euro's per jaar vragen voor een overzicht van meldingen die gratis en openbaar zijn. Dat opruimwerk kun je ook één keer goed doen en daarna weggeven.</p>
+        <p>Naast de Insider Scanner bouw ik de <a href="/stock-screener/">Stock Screener</a>, die kandidaten uit verschillende lijsten op één GARP-schaal zet.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="vragen">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="vragen">Veelgestelde vragen</h2>
+        </div>
+        <div class="faq">
+          <h3>Is een insideraankoop een koopsignaal?</h3>
+          <p>Nee. Een melding is een feit met een datum, een naam en een bedrag. Een bestuurder verkoopt om tientallen redenen die niets met het bedrijf te maken hebben. Een aankoop zegt meer, maar ook dan blijft het een aanleiding voor eigen onderzoek en geen advies.</p>
+
+          <h3>Waarom staan ASML, Shell en Philips niet tussen de Amerikaanse meldingen?</h3>
+          <p>De Amerikaanse meldplicht met Form 4 geldt niet voor een buitenlandse uitgevende instelling, ook niet als die aan een Amerikaanse beurs noteert. Voor Nederlandse bestuurders gebruikt de Insider Scanner daarom het register van de AFM.</p>
+
+          <h3>Wanneer kan ik de Insider Scanner gebruiken?</h3>
+          <p>De Insider Scanner is in ontwikkeling. Hij komt later gratis en open source online, net als de Belegger Kees Methode. Tot die tijd staat op deze pagina de uitleg.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="disclaimer">
+      <div class="wrap">
+        <div class="notice">
+          <strong id="disclaimer">Disclaimer</strong>
+          <p>De Insider Scanner en deze pagina zijn uitsluitend bedoeld voor educatieve doeleinden en vormen geen persoonlijk beleggingsadvies. Een insidermelding of een score is geen aanbeveling om te kopen of te verkopen. Beleggen brengt risico's met zich mee en je kunt je inleg verliezen. Belegger Kees is geen geregistreerde beleggingsonderneming bij de AFM.</p>
+        </div>
+        <p class="small" style="margin-top:24px">Bijgewerkt: 13 oktober 2026. Auteur: Kees van Wanrooij.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- site:footer:start -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <p class="footer-brand">Kees van Wanrooij<span class="dot" aria-hidden="true">.</span></p>
+          <p class="small">Ondernemer, belegger en NLP-practitioner. Oprichter van Belegger Kees. Educatie, geen beleggingsadvies.</p>
+        </div>
+        <nav aria-label="Beleggen">
+          <h2>Beleggen</h2>
+          <ul>
+            <li><a href="https://beleggerkees.nl">Belegger Kees</a></li>
+            <li><a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Belegger Kees Methode</a></li>
+            <li><a href="/beleggen/">Beleggen met GARP en NLP</a></li>
+            <li><a href="/welke-kees/">Welke Kees is Belegger Kees?</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Meer over beleggen">
+          <h2>Meer over beleggen</h2>
+          <ul>
+            <li><a href="https://beleggerkees.nl/beleggen-voor-beginners">Beleggen voor beginners</a></li>
+            <li><a href="https://beleggerkees.nl/mindset-en-beleggen">Mindset en beleggen</a></li>
+            <li><a href="https://beleggerkees.nl/beleggen-met-ai">Beleggen met AI</a></li>
+            <li><a href="/veelgestelde-vragen/">Veelgestelde vragen</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Onderzoek en tools">
+          <h2>Onderzoek en tools</h2>
+          <ul>
+            <li><a href="/insider-scanner/" aria-current="true">Insider Scanner</a></li>
+            <li><a href="/stock-screener/">Stock Screener</a></li>
+            <li><a href="https://seekingalpha.com/author/investor-kees">Investor Kees op Seeking Alpha</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Kees van Wanrooij">
+          <h2>Kees van Wanrooij</h2>
+          <ul>
+            <li><a href="/over-mij/">Over mij</a></li>
+            <li><a href="https://www.linkedin.com/in/keesvanwanrooij/">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/beleggerkees/">Instagram</a></li>
+            <li><a href="https://github.com/keesvanwanrooij">GitHub</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Kees van Wanrooij. Belegger Kees is geen geregistreerde beleggingsonderneming bij de AFM.</p>
+        <p><a href="/sitemap/">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- site:footer:end -->
+</body>
+</html>
