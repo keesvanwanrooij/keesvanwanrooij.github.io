@@ -1,17 +1,14 @@
 # www.keesvanwanrooij.nl
-# Deze host bedient vier GitHub Pages repository's onder een domein:
-#   /                          keesvanwanrooij.github.io  (deze site, over beleggen)
+# Deze host bedient twee GitHub Pages repository's, allebei over beleggen:
+#   /                          keesvanwanrooij.github.io  (deze site)
 #   /belegger-kees-methode/    belegger-kees-methode
-#   /cursus-elektrotechniek/   cursus-elektrotechniek     (hobby project)
-#   /cursus-cv-ketels/         cursus-cv-ketels           (hobby project)
-# robots.txt wordt alleen vanaf de hostroot gelezen, dus die van de drie
-# andere repository's wordt door zoekmachines genegeerd; alleen deze telt.
+# robots.txt wordt alleen vanaf de hostroot gelezen, dus die van de methode
+# wordt door zoekmachines genegeerd; alleen deze telt.
 #
-# sitemap.xml hier is één platte lijst met alle pagina's van het hele
-# domein: deze site plus de Belegger Kees Methode en de twee cursussen.
-# tools/build-sitemap.py haalt de andere drie repository's live op en zet
-# alles samen, want de hub heeft geen lokale toegang tot hun broncode.
-# Registreer alleen dit ene bestand in Search Console.
+# sitemap.xml hier is een platte lijst met alle pagina's van deze host:
+# deze site plus de Belegger Kees Methode. tools/build-sitemap.py haalt de
+# methode live op en zet alles samen. De cursussen staan op een eigen
+# subdomein met een eigen robots.txt en sitemap, en horen hier niet bij.
 
 User-agent: *
 Allow: /

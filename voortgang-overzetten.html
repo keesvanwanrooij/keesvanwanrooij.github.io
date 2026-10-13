@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Voortgang overzetten</title>
+  <meta name="robots" content="noindex, nofollow">
+  <!--
+    Technische brug, geen pagina voor bezoekers. Nergens gelinkt, niet in de sitemap.
+
+    De cursussen stonden tot oktober 2026 op www.keesvanwanrooij.nl/cursus-.../ en
+    bewaarden de voortgang in localStorage van deze origin. Nu staan ze op een eigen
+    subdomein, met een eigen (lege) localStorage. Een cursus laadt deze pagina daarom
+    eenmalig in een onzichtbaar iframe en vraagt de oude voortgang op. Daarna ruimt
+    deze pagina de oude service worker en cache van die cursus op, zodat een oude
+    bladwijzer of geinstalleerde app niet langer de verouderde cursus toont.
+
+    Antwoordt alleen aan de twee cursusdomeinen hieronder, en alleen aan het venster
+    waar deze pagina in staat. De voortgang zelf blijft hier staan als reservekopie.
+  -->
+  <script>
+    (function () {
+      var CURSUSSEN = {
+        'https://elektrotechniek.keesvanwanrooij.nl': {
+          sleutel: 'cursus-elektro-voortgang',
+          pad: '/cursus-elektrotechniek/',
+          cache: 'cursus-elektro-'
+        },
+        'https://cv-ketels.keesvanwanrooij.nl': {
+          sleutel: 'cursus-cv-voortgang',
+          pad: '/cursus-cv-ketels/',
+          cache: 'cursus-cv-'
+        }
+      };
+
+      function opruimen(c) {
+        var scope = location.origin + c.pad;
+        if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            regs.forEach(function (r) { if (r.scope.indexOf(scope) === 0) r.unregister(); });
+          }).catch(function () {});
+        }
+        if (window.caches && caches.keys) {
+          caches.keys().then(function (namen) {
+            namen.forEach(function (n) { if (n.indexOf(c.cache) === 0) caches.delete(n); });
+          }).catch(function () {});
+        }
+      }
+
+      window.addEventListener('message', function (e) {
+        var c = CURSUSSEN[e.origin];
+        if (!c || e.source !== window.parent || !e.data || e.data.type !== 'bk-voortgang-vraag') return;
+        var voortgang = null;
+        try { voortgang = localStorage.getItem(c.sleutel); } catch (fout) { /* geblokkeerde opslag: niets over te zetten */ }
+        e.source.postMessage({ type: 'bk-voortgang', voortgang: voortgang }, e.origin);
+        opruimen(c);
+      });
+    })();
+  </script>
+</head>
+<body></body>
+</html>

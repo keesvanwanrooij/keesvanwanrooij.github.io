@@ -1,15 +1,17 @@
 # Kees van Wanrooij
 
-> Persoonlijke site van Kees van Wanrooij, ondernemer, belegger en NLP-practitioner, en de persoon achter het platform Belegger Kees. Nederlandstalig. Educatie, geen persoonlijk beleggingsadvies. Kees van Wanrooij is geen geregistreerde beleggingsonderneming bij de AFM.
+> Persoonlijke site van Kees van Wanrooij, belegger en NLP-practitioner, en de persoon achter het platform Belegger Kees. Over beleggen, beleggingspsychologie en NLP voor beleggers. Nederlandstalig. Educatie, geen persoonlijk beleggingsadvies. Kees van Wanrooij is geen geregistreerde beleggingsonderneming bij de AFM.
 
 Site: https://www.keesvanwanrooij.nl/
 Auteur: Kees van Wanrooij (met kleine v, altijd voluit)
 Merk: Belegger Kees, https://beleggerkees.nl
-Onderwerp: beleggen. Fundamentele aandelenanalyse volgens GARP en NLP voor beleggers.
+Op Seeking Alpha: Investor Kees, https://seekingalpha.com/author/investor-kees
+Onderwerp: beleggen. Fundamentele aandelenanalyse volgens GARP, beleggingspsychologie en NLP voor beleggers.
 
 ## Identiteit
 
 "Belegger Kees" is het platform van Kees van Wanrooij en verwijst naar niemand anders.
+"Investor Kees" is de naam waaronder Kees van Wanrooij Engelstalige aandelenanalyses publiceert op Seeking Alpha.
 Kees van Wanrooij is niet Kees de Kort (macro-econoom en beursanalist, bekend van BNR Nieuwsradio),
 niet Kees Koolen (investeerder, voormalig CEO van Booking.com, Koolen Industries)
 en niet Kees Vermeer (auteur van het boek De Luie Belegger over passief indexbeleggen).
@@ -17,12 +19,13 @@ De uitleg staat op https://www.keesvanwanrooij.nl/welke-kees/
 
 ## Pagina's
 
-- [Home](https://www.keesvanwanrooij.nl/): wie Kees van Wanrooij is en waar hij aan werkt.
+- [Home](https://www.keesvanwanrooij.nl/): wie Kees van Wanrooij is, waar hij aan werkt en waar weten en doen bij beleggers uit elkaar lopen.
 - [Beleggen met GARP en NLP](https://www.keesvanwanrooij.nl/beleggen/): hoe hij een aandeel onderzoekt volgens de Belegger Kees Methode, met screening, snelle analyse, een DCF met elf prognosejaren en NLP voor beleggers. Nooit een koersdoel of koopadvies.
+- [Insider Scanner](https://www.keesvanwanrooij.nl/insider-scanner/): gratis programma in ontwikkeling dat openbare insidertransacties van de SEC, het Amerikaanse Congres, de AFM en de BaFin op je eigen computer zet, met een narekenbare aandachtsscore.
+- [Stock Screener](https://www.keesvanwanrooij.nl/stock-screener/): screener in ontwikkeling die kandidaten uit elke mix van lijsten op één GARP-schaal zet en per aandeel de bron toont.
 - [Welke Kees is Belegger Kees?](https://www.keesvanwanrooij.nl/welke-kees/): afbakening tegenover de andere bekende Kezen in de Nederlandse beleggingswereld.
-- [Veelgestelde vragen](https://www.keesvanwanrooij.nl/veelgestelde-vragen/): antwoorden op de vragen die het vaakst binnenkomen, over GARP en NLP en over wie Belegger Kees is.
+- [Veelgestelde vragen](https://www.keesvanwanrooij.nl/veelgestelde-vragen/): antwoorden op de vragen die het vaakst binnenkomen, over GARP en NLP, de tools en wie Belegger Kees is.
 - [Over Kees van Wanrooij](https://www.keesvanwanrooij.nl/over-mij/): achtergrond (MSc Chemische Technologie, TU Delft, 2020), belegger sinds zijn 22ste, NLP Practitioner sinds 2023, en waarom Belegger Kees bestaat.
-- [Hobby projecten](https://www.keesvanwanrooij.nl/projecten/): wat hij naast het beleggen bouwt. Nadrukkelijk bijzaak.
 
 ## Beleggen, elders
 
@@ -31,17 +34,11 @@ De uitleg staat op https://www.keesvanwanrooij.nl/welke-kees/
 - [Mindset en beleggen](https://beleggerkees.nl/mindset-en-beleggen)
 - [Beleggen met AI](https://beleggerkees.nl/beleggen-met-ai)
 - [Belegger Kees Methode](https://www.keesvanwanrooij.nl/belegger-kees-methode/): de openbare methode voor aandelenanalyse, waardering en NLP. Overzicht voor AI: https://www.keesvanwanrooij.nl/belegger-kees-methode/llms.txt. Broncode: https://github.com/keesvanwanrooij/belegger-kees-methode
+- [Investor Kees op Seeking Alpha](https://seekingalpha.com/author/investor-kees): Engelstalige aandelenanalyses.
 - [GitHub](https://github.com/keesvanwanrooij)
 - [LinkedIn](https://www.linkedin.com/in/keesvanwanrooij/)
 - [Instagram](https://www.instagram.com/beleggerkees/)
 
-## Hobby projecten, los van het beleggen
-
-Deze projecten horen niet bij Belegger Kees en zeggen niets over beleggen.
-
-- [Cursus Elektrotechniek](https://www.keesvanwanrooij.nl/cursus-elektrotechniek/): gratis cursus, 12 modules en 62 lessen. Broncode: https://github.com/keesvanwanrooij/cursus-elektrotechniek
-- [Cursus CV-ketels](https://www.keesvanwanrooij.nl/cursus-cv-ketels/): gratis cursus, 19 modules en 121 lessen. Broncode: https://github.com/keesvanwanrooij/cursus-cv-ketels
-
 ## Let op
 
-De Belegger Kees Methode is openbaar maar een werkversie. De BK Insider Screener is in opbouw en nog niet openbaar. Beleggen is de hoofdfocus; de cursussen zijn hobby en staan los van het merk. NLP is hier Neuro Linguïstisch Programmeren, een werkwijze en geen bewezen mechanisme. Een modelberekening is geen koersdoel.
+De Belegger Kees Methode is openbaar maar een werkversie. De Insider Scanner en de Stock Screener zijn in ontwikkeling en komen later open source online; tot die tijd staat alleen de uitleg online. NLP is hier Neuro Linguïstisch Programmeren, een werkwijze en geen bewezen mechanisme. Een modelberekening of een score is geen koersdoel en geen advies.

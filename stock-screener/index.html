@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stock Screener: aandelen op één GARP-schaal | Kees van Wanrooij</title>
+  <meta name="description" content="De Stock Screener zet kandidaten uit elke mix van lijsten en screeners op één GARP-schaal en laat zien waar elk aandeel vandaan komt. Zo kies je waar je onderzoeksuren heen gaan. In ontwikkeling.">
+  <link rel="canonical" href="https://www.keesvanwanrooij.nl/stock-screener/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Kees van Wanrooij">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Kees van Wanrooij">
+  <meta property="og:title" content="Stock Screener: aandelen op één GARP-schaal">
+  <meta property="og:description" content="Kandidaten uit elke mix van lijsten op één GARP-schaal, met de bron van elk aandeel erbij. In ontwikkeling, later open source.">
+  <meta property="og:url" content="https://www.keesvanwanrooij.nl/stock-screener/">
+  <meta property="og:image" content="https://www.keesvanwanrooij.nl/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kees van Wanrooij, belegger en NLP-practitioner, maker van Belegger Kees">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.keesvanwanrooij.nl/stock-screener/#pagina",
+        "url": "https://www.keesvanwanrooij.nl/stock-screener/",
+        "name": "Stock Screener: aandelen op één GARP-schaal",
+        "inLanguage": "nl-NL",
+        "isPartOf": { "@id": "https://www.keesvanwanrooij.nl/#website" },
+        "about": { "@id": "https://www.keesvanwanrooij.nl/stock-screener/#tool" },
+        "author": { "@id": "https://www.keesvanwanrooij.nl/#kees" },
+        "dateModified": "2026-10-13"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.keesvanwanrooij.nl/stock-screener/#tool",
+        "name": "Stock Screener",
+        "description": "Screener die aandelenkandidaten uit elke mix van lijsten en screener-exports op één growth at a reasonable price (GARP) model scoort, met per aandeel de lijst waar het vandaan komt, en alles in één Excel-werkboek zet.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Windows, macOS, Linux",
+        "isAccessibleForFree": true,
+        "creativeWorkStatus": "In ontwikkeling",
+        "author": { "@id": "https://www.keesvanwanrooij.nl/#kees" },
+        "publisher": { "@id": "https://beleggerkees.nl/#organisatie" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.keesvanwanrooij.nl/" },
+          { "@type": "ListItem", "position": 2, "name": "Beleggen", "item": "https://www.keesvanwanrooij.nl/beleggen/" },
+          { "@type": "ListItem", "position": 3, "name": "Stock Screener", "item": "https://www.keesvanwanrooij.nl/stock-screener/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Kiest de Stock Screener aandelen voor mij?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nee. De screener rangschikt kandidaten voor menselijke aandacht en laat de cijfers achter die rangorde zien. Het eigenlijke onderzoek, de waardering en het oordeel komen daarna, met de primaire bronnen erbij." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is een score van 80 twee keer zo goed als een score van 40?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nee. Een score rangschikt en voorspelt niets. Hij zegt welk aandeel als eerste een plek in je onderzoek verdient, niet welk aandeel het meest gaat opleveren." }
+          },
+          {
+            "@type": "Question",
+            "name": "Wanneer kan ik de Stock Screener gebruiken?",
+            "acceptedAnswer": { "@type": "Answer", "text": "De Stock Screener is in ontwikkeling. Hij komt later gratis en open source online, net als de Belegger Kees Methode. Tot die tijd staat op deze pagina de uitleg." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Ga naar de inhoud</a>
+
+  <!-- site:header:start -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">Kees van Wanrooij<span class="dot" aria-hidden="true">.</span></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+      <label class="menu-toggle-btn" for="menu-toggle">
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </label>
+      <nav class="site-nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="/beleggen/">Beleggen</a></li>
+          <li><a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Methode</a></li>
+          <li><a href="/over-mij/">Over mij</a></li>
+        </ul>
+        <a class="btn btn--secondary btn--compact header-cta" href="https://beleggerkees.nl/quiz">Beleggersquiz</a>
+      </nav>
+    </div>
+  </header>
+  <!-- site:header:end -->
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="titel">
+      <div class="wrap">
+        <p class="label">Tool in ontwikkeling</p>
+        <h1 id="titel">Stock Screener: aandelen op één GARP-schaal</h1>
+        <p class="lead">Onderzoekstijd is het schaarse goed. Een aandeel uit een brede lijst is mijn uren pas waard als het beter is dan de beste kandidaat die ik al heb. De Stock Screener zet alle kandidaten op één schaal, zodat die vergelijking minuten kost in plaats van dagen.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="/beleggen/">Lees hoe ik beleg</a>
+          <a class="btn btn--secondary" href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Lees de methode</a>
+        </div>
+        <p class="small" style="margin-top:24px">Status: in ontwikkeling. De Stock Screener komt later gratis en open source online, net als de Belegger Kees Methode. Tot die tijd staat hier de uitleg.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="probleem">
+      <div class="wrap prose">
+        <h2 id="probleem">Het probleem: kandidaten uit te veel plekken</h2>
+        <p>Een belegger die groei tegen een redelijke prijs zoekt, krijgt kandidaten uit verschillende hoeken. Uit eigen screeners die al op fundamentals filteren, zodat elke naam er op papier goed uitziet. Uit brede marktlijsten met duizenden bedrijven, waarvan de meeste geen blik waard zijn. En uit een tip, een volglijst of een los tekstbestand.</p>
+        <p>Die met de hand tegen elkaar afwegen betekent honderden pagina's openen. Op één schaal zetten kost een script. Dat is wat de Stock Screener doet: elk bedrijf krijgt dezelfde score op dezelfde schaal, ongeacht de lijst waar het vandaan komt, en het werkboek laat per aandeel zien op welke lijsten het staat.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="werking">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="werking">Hoe het werkt</h2>
+          <p class="lead">Je zet je lijsten in een map. Er valt niets in te stellen: de map is de configuratie.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Lijsten inlezen</h3>
+            <p>Een brede CSV met ticker, naam, sector en industrie, exports van je eigen screeners in CSV of Excel, of een tekstbestand met tickers. Eén bestand of een mix, in elke combinatie.</p>
+          </li>
+          <li>
+            <h3>Het juiste aandeel vinden</h3>
+            <p>Een ticker alleen is dubbelzinnig: TRN is Trinity Industries in New York en Trainline in Londen. De screener gebruikt eerst de beurs, dan de ticker en dan de naam, en controleert elke koppeling op naam, valuta, koers en beurswaarde. Twijfelgevallen komen op een aparte lijst om na te kijken.</p>
+          </li>
+          <li>
+            <h3>Cijfers ophalen en bewaren</h3>
+            <p>De fundamentele cijfers worden één keer per bedrijf opgehaald en pas na de volgende kwartaalcijfers ververst, met een geschiedenis van elke versie. Valuta's worden omgerekend waar een verhouding ze mengt, bijvoorbeeld een bedrijf dat in renminbi rapporteert en in Hongkong noteert.</p>
+          </li>
+          <li>
+            <h3>Scoren en een werkboek schrijven</h3>
+            <p>Elk bedrijf krijgt een score van 0 tot 100 op hetzelfde GARP-model. Het resultaat is één Excel-werkboek met een shortlist over alle bronnen en een blad per bron. Foute cijfers en foute koppelingen corrigeer je zelf in een apart bestand; de screener leest die alleen.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="model">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="model">Het model: GARP in getallen</h2>
+          <p class="lead">Het model vertaalt de filosofie uit de Belegger Kees Methode naar getallen die een script kan meten. Ik zoek bedrijven waarvan de omzet in tien jaar drie tot vijf keer kan groeien, ongeveer 11,6 tot 17,5 procent per jaar, waarbij de winst sneller groeit dan de omzet, tegen een redelijke prijs.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Groei</dt><dd><span class="mono">25</span> punten. Omzetgroei van het laatste kwartaal en over drie jaar, en winstgroei.</dd></div>
+          <div><dt>Operationele hefboom</dt><dd><span class="mono">10</span> punten. Verandering van de operationele marge over drie jaar.</dd></div>
+          <div><dt>Winstgevendheid</dt><dd><span class="mono">15</span> punten. Operationele marge en vrije-kasstroommarge.</dd></div>
+          <div><dt>Kwaliteit</dt><dd><span class="mono">10</span> punten. Wordt winst kasstroom, en eet verwatering de groei niet op.</dd></div>
+          <div><dt>Balans</dt><dd><span class="mono">10</span> punten. Nettoschuld ten opzichte van EBITDA en de current ratio.</dd></div>
+          <div><dt>Waardering</dt><dd><span class="mono">20</span> punten. De PEG, berekend en niet overgenomen, en het vrije-kasstroomrendement. Een PEG onder 1,5 is redelijk, onder 1,0 aantrekkelijk.</dd></div>
+          <div><dt>Voorsprong</dt><dd><span class="mono">5</span> punten. Minder analisten kan meer ruimte geven voor eigen onderzoek, maar bewijst nooit dat een aandeel verkeerd geprijsd is.</dd></div>
+          <div><dt>Modelfit</dt><dd><span class="mono">5</span> punten. Past het bedrijfsmodel bij GARP, of is het cyclisch, gereguleerd, binair of financieel.</dd></div>
+        </dl>
+        <div class="prose" style="margin-top:32px">
+          <p>Twee keuzes maken het model eerlijk. <strong>Extreme waarden krijgen niets extra:</strong> 300 procent omzetgroei scoort hetzelfde als 18 procent, zodat een kleine basis of een eenmalige uitschieter geen ranglijst kan domineren. En <strong>ontbrekende data telt niet als nul</strong> maar valt weg. Een score die op minder dan 60 procent van de weging rust, krijgt een waarschuwing en komt achteraan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="grens">
+      <div class="wrap prose">
+        <h2 id="grens">Wat een script niet kan zien</h2>
+        <p>Een script kan de getallen meten. Het kan niet beoordelen of groei structureel is, of het bestuur geloofwaardig is en of ik het bedrijf begrijp. Dat blijft mensenwerk, in de snelle analyse die erna komt.</p>
+        <p>Daar zit ook de psychologie. Een hoge score voelt als bevestiging, en precies dat gevoel wil ik herkennen voordat het mijn onderzoek gaat sturen. Een score rangschikt en voorspelt niets: 80 is niet twee keer zo goed als 40. De screener bepaalt alleen welk aandeel als eerste mijn aandacht krijgt.</p>
+        <ul class="dash-list">
+          <li>Hij kiest geen aandelen en geeft geen advies.</li>
+          <li>Hij vervangt de analyse, de waardering en het oordeel niet.</li>
+          <li>Hij handelt niet en is niet gekoppeld aan een broker.</li>
+          <li>De cijfers komen van derden en kunnen fout zijn of achterlopen. Wat een conclusie draagt, controleer ik bij de bron.</li>
+        </ul>
+        <p>Wil je zien wat er na de screening gebeurt? In de <a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Belegger Kees Methode</a> staan de snelle analyse met tien No Go checks en de waardering met een DCF. Voor het bestuur en de insiders van een bedrijf gebruik ik de <a href="/insider-scanner/">Insider Scanner</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="vragen">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="vragen">Veelgestelde vragen</h2>
+        </div>
+        <div class="faq">
+          <h3>Kiest de Stock Screener aandelen voor mij?</h3>
+          <p>Nee. De screener rangschikt kandidaten voor menselijke aandacht en laat de cijfers achter die rangorde zien. Het eigenlijke onderzoek, de waardering en het oordeel komen daarna, met de primaire bronnen erbij.</p>
+
+          <h3>Is een score van 80 twee keer zo goed als een score van 40?</h3>
+          <p>Nee. Een score rangschikt en voorspelt niets. Hij zegt welk aandeel als eerste een plek in je onderzoek verdient, niet welk aandeel het meest gaat opleveren.</p>
+
+          <h3>Wanneer kan ik de Stock Screener gebruiken?</h3>
+          <p>De Stock Screener is in ontwikkeling. Hij komt later gratis en open source online, net als de Belegger Kees Methode. Tot die tijd staat op deze pagina de uitleg.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="disclaimer">
+      <div class="wrap">
+        <div class="notice">
+          <strong id="disclaimer">Disclaimer</strong>
+          <p>De Stock Screener en deze pagina zijn uitsluitend bedoeld voor educatieve doeleinden en vormen geen persoonlijk beleggingsadvies. Een score is geen voorspelling en geen aanbeveling. Beleggen brengt risico's met zich mee en je kunt je inleg verliezen. Belegger Kees is geen geregistreerde beleggingsonderneming bij de AFM.</p>
+        </div>
+        <p class="small" style="margin-top:24px">Bijgewerkt: 13 oktober 2026. Auteur: Kees van Wanrooij.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- site:footer:start -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <p class="footer-brand">Kees van Wanrooij<span class="dot" aria-hidden="true">.</span></p>
+          <p class="small">Ondernemer, belegger en NLP-practitioner. Oprichter van Belegger Kees. Educatie, geen beleggingsadvies.</p>
+        </div>
+        <nav aria-label="Beleggen">
+          <h2>Beleggen</h2>
+          <ul>
+            <li><a href="https://beleggerkees.nl">Belegger Kees</a></li>
+            <li><a href="https://www.keesvanwanrooij.nl/belegger-kees-methode/">Belegger Kees Methode</a></li>
+            <li><a href="/beleggen/">Beleggen met GARP en NLP</a></li>
+            <li><a href="/welke-kees/">Welke Kees is Belegger Kees?</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Meer over beleggen">
+          <h2>Meer over beleggen</h2>
+          <ul>
+            <li><a href="https://beleggerkees.nl/beleggen-voor-beginners">Beleggen voor beginners</a></li>
+            <li><a href="https://beleggerkees.nl/mindset-en-beleggen">Mindset en beleggen</a></li>
+            <li><a href="https://beleggerkees.nl/beleggen-met-ai">Beleggen met AI</a></li>
+            <li><a href="/veelgestelde-vragen/">Veelgestelde vragen</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Onderzoek en tools">
+          <h2>Onderzoek en tools</h2>
+          <ul>
+            <li><a href="/insider-scanner/">Insider Scanner</a></li>
+            <li><a href="/stock-screener/" aria-current="true">Stock Screener</a></li>
+            <li><a href="https://seekingalpha.com/author/investor-kees">Investor Kees op Seeking Alpha</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Kees van Wanrooij">
+          <h2>Kees van Wanrooij</h2>
+          <ul>
+            <li><a href="/over-mij/">Over mij</a></li>
+            <li><a href="https://www.linkedin.com/in/keesvanwanrooij/">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/beleggerkees/">Instagram</a></li>
+            <li><a href="https://github.com/keesvanwanrooij">GitHub</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Kees van Wanrooij. Belegger Kees is geen geregistreerde beleggingsonderneming bij de AFM.</p>
+        <p><a href="/sitemap/">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- site:footer:end -->
+</body>
+</html>

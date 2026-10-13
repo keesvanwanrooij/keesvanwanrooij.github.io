@@ -1,22 +1,27 @@
 # -*- coding: utf-8 -*-
 """
-Bouwt één compleet overzicht van alle pagina's op www.keesvanwanrooij.nl,
-over de vier repository's heen: deze hub, de Belegger Kees Methode en de
-twee cursussen. Ze staan onder hetzelfde domein maar in aparte repo's, dus
-de hub kan hun pagina's niet lokaal inlezen: dit script haalt hun eigen
-sitemap.xml en de <title> van elke pagina live op.
+Bouwt één compleet overzicht van alle pagina's op www.keesvanwanrooij.nl:
+deze hub plus de Belegger Kees Methode, die als aparte repository onder
+/belegger-kees-methode/ op hetzelfde domein staat. De hub kan de pagina's
+van de methode niet lokaal inlezen, dus dit script haalt haar sitemap.xml
+en de <title> van elke pagina live op.
+
+De twee cursussen (elektrotechniek en cv-ketels) staan bewust NIET in deze
+sitemap. Ze hebben elk een eigen subdomein met een eigen sitemap.xml en
+robots.txt, zodat dit domein alleen over beleggen gaat.
 
 Output:
-  sitemap.xml       platte sitemap met alle ~350 pagina's van het domein.
+  sitemap.xml       platte sitemap met alle pagina's van www.keesvanwanrooij.nl.
   sitemap/index.html  overzichtelijke HTML-pagina met dezelfde lijst,
                     gegroepeerd per site en per sectie, voor bezoekers
                     en voor de interne links die Google's crawler volgt.
 
 sitemap-site.xml (de eigen pagina's van de hub) blijft de brondata voor het
 "Kees van Wanrooij"-deel van beide bestanden; die lijst onderhoud je nog
-altijd zelf. Draai dit script opnieuw na elke wijziging aan een van de
-vier sites, of laat .github/workflows/refresh-sitemap.yml het periodiek
-doen.
+altijd zelf. Draai dit script opnieuw na elke wijziging aan de hub of de
+methode, of laat .github/workflows/refresh-sitemap.yml het periodiek doen.
+Na het schrijven draait het tools/build-chrome.py, zodat /sitemap/ ook
+zijn kop en voet krijgt.
 
 Gebruik: python tools/build-sitemap.py
 """
@@ -24,6 +29,7 @@ import concurrent.futures
 import html
 import io
 import re
+import subprocess
 import sys
 import urllib.error
 import urllib.request
@@ -46,20 +52,6 @@ EXTERNE_SITES = [
             "onderzoek": "Onderzoek", "resources": "Resources", "community": "Community",
             "nlp-coaching-voor-beleggers": "NLP-coaching", "over-belegger-kees": "Over Belegger Kees",
         },
-    ),
-    (
-        "Cursus Elektrotechniek",
-        HUB + "/cursus-elektrotechniek/sitemap.xml",
-        HUB + "/cursus-elektrotechniek/",
-        {"module": "Modules", "les": "Losse lessen", "toepassingen": "Toepassingen",
-         "merken": "Merken", "naslag": "Naslag"},
-    ),
-    (
-        "Cursus CV-ketels",
-        HUB + "/cursus-cv-ketels/sitemap.xml",
-        HUB + "/cursus-cv-ketels/",
-        {"module": "Modules", "les": "Losse lessen", "storingzoeker": "Storingzoeker",
-         "kaarten": "Flashcards", "naslag": "Naslag"},
     ),
 ]
 
@@ -195,7 +187,7 @@ def schrijf_sitemap_pagina(eigen, externe, totaal):
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sitemap | Kees van Wanrooij</title>
-  <meta name="description" content="Alle pagina's van www.keesvanwanrooij.nl op een plek: deze site, de Belegger Kees Methode en de twee gratis cursussen, {totaal} pagina's in totaal.">
+  <meta name="description" content="Alle pagina's van www.keesvanwanrooij.nl op een plek: deze site over beleggen en de Belegger Kees Methode, {totaal} pagina's in totaal.">
   <link rel="canonical" href="{HUB}/sitemap/">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Kees van Wanrooij">
@@ -217,7 +209,7 @@ def schrijf_sitemap_pagina(eigen, externe, totaal):
       <div class="wrap">
         <p class="label">Overzicht</p>
         <h1 id="titel">Sitemap</h1>
-        <p class="lead">Alle {totaal} pagina's van www.keesvanwanrooij.nl op een plek: deze site, de Belegger Kees Methode en de twee gratis cursussen. Machineleesbaar staat alles ook in <a href="/sitemap.xml">sitemap.xml</a>.</p>
+        <p class="lead">Alle {totaal} pagina's van www.keesvanwanrooij.nl op een plek: deze site over beleggen en de Belegger Kees Methode. Machineleesbaar staat alles ook in <a href="/sitemap.xml">sitemap.xml</a>.</p>
       </div>
     </section>
 
@@ -261,6 +253,10 @@ def main():
 
     print(f"sitemap.xml: {len(alle)} pagina's ({len(eigen)} eigen + "
           + ", ".join(f"{len(e)} {n}" for n, e, _ in externe_ruw) + ")")
+
+    # Zonder deze stap staat /sitemap/ zonder kop en voet online: de pagina
+    # hierboven wordt met lege plaatshouders geschreven.
+    subprocess.run([sys.executable, str(ROOT / "tools" / "build-chrome.py")], check=True)
 
 
 if __name__ == "__main__":
