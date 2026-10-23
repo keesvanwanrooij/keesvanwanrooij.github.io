@@ -100,11 +100,11 @@ De Belegger Kees Methode is openbaar en staat als Live op de home en op `belegge
 
 ## Entiteiten in de gestructureerde data
 
-Alle drie de sites beschrijven dezelfde twee entiteiten met dezelfde `@id`, zodat Google ze aan elkaar koppelt:
+Alle drie de sites beschrijven dezelfde twee entiteiten met dezelfde `@id`. Beide `@id`'s horen bij beleggerkees.nl: dit domein ondersteunt het merk, niet andersom. Neem nooit een `@id` van keesvanwanrooij.nl over op beleggerkees.nl.
 
 | Entiteit | `@id` | Waar gedefinieerd |
 | --- | --- | --- |
-| Kees van Wanrooij (Person) | `https://www.keesvanwanrooij.nl/#kees` | hier (`index.html`, `over-mij/`) en in de methode (`site/build.py`) |
+| Kees van Wanrooij (Person) | `https://beleggerkees.nl/auteur/kees-van-wanrooij#person` | beleggerkees.nl (auteurspagina), hier (`index.html`, `over-mij/`) en in de methode (`site/build.py`) |
 | Belegger Kees (Organization) | `https://beleggerkees.nl#organization` | beleggerkees.nl, hier en in de methode |
 
 `sameAs` van de persoon: beleggerkees.nl, de auteurspagina `https://beleggerkees.nl/auteur/kees-van-wanrooij`, LinkedIn, Instagram, GitHub en `https://seekingalpha.com/author/investor-kees` (Investor Kees). Voeg je een profiel toe, doe dat dan op alle drie de sites.
