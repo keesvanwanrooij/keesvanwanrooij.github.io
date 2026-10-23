@@ -98,13 +98,16 @@ De Belegger Kees Methode is openbaar en staat als Live op de home en op `belegge
 3. Voeg de link toe aan `llms.txt`.
 4. Werk `lastmod` in `sitemap-site.xml` bij, "Bijgewerkt" op de pagina, en draai daarna `python tools/build-sitemap.py`.
 
-## Nog te doen na de lancering van beleggerkees.nl
+## Entiteiten in de gestructureerde data
 
-Zodra de nieuwe Astro-site live is (`/over`, `/auteur/kees-van-wanrooij`, `/redactioneel` en `/aandelen` geven nu nog 404):
+Alle drie de sites beschrijven dezelfde twee entiteiten met dezelfde `@id`, zodat Google ze aan elkaar koppelt:
 
-- Link vanaf `over-mij/` naar de auteurspagina en voeg die toe aan `sameAs` in de Person-gegevens.
-- Link vanaf `beleggen/` naar `/aandelen` en `/redactioneel`.
-- Vraag vanaf beleggerkees.nl een link terug naar deze site (voorkeur: de auteurspagina en de voettekst).
+| Entiteit | `@id` | Waar gedefinieerd |
+| --- | --- | --- |
+| Kees van Wanrooij (Person) | `https://www.keesvanwanrooij.nl/#kees` | hier (`index.html`, `over-mij/`) en in de methode (`site/build.py`) |
+| Belegger Kees (Organization) | `https://beleggerkees.nl#organization` | beleggerkees.nl, hier en in de methode |
+
+`sameAs` van de persoon: beleggerkees.nl, de auteurspagina `https://beleggerkees.nl/auteur/kees-van-wanrooij`, LinkedIn, Instagram, GitHub en `https://seekingalpha.com/author/investor-kees` (Investor Kees). Voeg je een profiel toe, doe dat dan op alle drie de sites.
 
 ## Lettertypen
 
